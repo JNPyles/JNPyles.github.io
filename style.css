@@ -4,9 +4,10 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: top;
+    align-items: flex-start;
     min-height: 100vh;
     background-color: #f4f4f4;
+	overflow-y: scroll;
 }
 
 .container {
