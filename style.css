@@ -1,5 +1,6 @@
 body {
-    font-family: 'Courier New', monospace;
+    /*font-family: 'Courier New', monospace;*/
+	font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,11 +9,12 @@ body {
     min-height: 100vh;
     background-color: #f4f4f4;
 	overflow-y: scroll;
+	font-size: 1.0em;
 }
 
 .container {
     width: 90%;
-    max-width: 800px;
+    max-width: 660px;
     margin: 20px;
     padding: 20px;
     background-color: #ffffff;
@@ -32,14 +34,14 @@ h1 {
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-bottom: 20px;
     color: #333333;
     text-align: left;
 }
 
 h3 {
-    font-size: 1.0em;
+    font-size: 1.2em;
     margin-bottom: 20px;
     color: #333333;
     text-align: left;
@@ -59,7 +61,7 @@ ul li {
 ul li a {
     text-decoration: none;
     color: #007BFF;
-    font-size: 1.0em;
+    /*font-size: 1.0em;*/
 }
 
 ul li a:hover {
@@ -71,7 +73,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  font-size: 18px;
+  /*font-size: 0.9em;*/
   text-align: left;
 }
 
@@ -88,16 +90,12 @@ table tr {
 
 /* Add a background color to the table header */
 table th {
-  background-color: #f2f2f2;
-  color: #333;
+  color: #f2f2f2;
+  background-color: #333;
+  text-align: center;
 }
 
 /* Add alternating background color to table rows */
 table tr:nth-child(even) {
   background-color: #f9f9f9;
-}
-
-/* Add hover effect to table rows */
-table tr:hover {
-  background-color: #f1f1f1;
 }
