@@ -3,72 +3,31 @@ layout: default
 title: Home
 ---
 
-<h1>Jonathon Pyles</h1>
-<p>AI Development & Governance | CRCM | CERP</p>
+<header style="margin-bottom: 3rem;">
+    <h1 style="margin-bottom: 0.5rem;">Bridging the gap between regulatory compliance and deep-tech AI development.</h1>
+    <p style="font-size: 1.2rem; color: var(--secondary);">
+        By combining enterprise risk frameworks (CRCM, CERP) with practical data science, I build automated solutions that are technically robust and strictly compliant with modern regulatory standards.
+    </p>
+</header>
 
-<h2>Articles & Insights</h2>
+<h2>Featured AI & Tech Projects</h2>
 <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.external_url | default: post.url }}">
-        {{ post.title }}
-      </a> 
-      <small>({{ post.date | date: "%b %Y" }})</small>
-    </li>
-  {% endfor %}
-</ul>
-
-<h2>AI & Tech Projects</h2>
-<ul>
-  {% for project in site.projects %}
+  {% for project in site.projects limit:3 %}
     <li>
       <strong><a href="{{ project.link }}">{{ project.title }}</a></strong>
       {% for tool in project.tools %}
         <span class="project-tag">{{ tool }}</span>
       {% endfor %}
-      <br><small>{{ project.date | date: "%Y" }}</small>
     </li>
   {% endfor %}
 </ul>
 
-</body>
-</html>
-
-<!--
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathon Pyles</title>
-	
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <section>
-            <h1>Jonathon Pyles</h1>
-				<a href="https://www.linkedin.com/in/jonathonpyles/">Linkedin</a> | 
-				<a href="https://github.com/JNPyles">Github</a>
-				<ul>
-				<li><a href="https://www.aba.com/training-events/certifications/certified-regulatory-compliance-manager">Certified Regulatory Compliance Manager (CRCM)</a/> since 2022</li>
-				<li><a href="https://www.aba.com/training-events/certifications/certified-enterprise-risk-professional">Certified Enterprise Risk Professional (CERP)</a> since 2023</li>
-				</ul>
-			<h2>Articles</h2>
-				<ul>
-				<li><a href="https://www.linkedin.com/pulse/using-ai-summarize-1100-complaints-30-minutes-jonathon-pyles-adlgc/">Using AI to Summarize 1,100 Complaints in 30 Minutes</a> 8/31/2024</li>
-				<li><a href="https://www.linkedin.com/pulse/using-python-explore-cfpb-complaint-data-jonathon-pyles-sxrqc/">Using Python to Explore CFPB Complaint Data</a> 8/7/2024</li>
-
-				</ul>
-			<h2>Projects</h2>
-				<ul>
-					<li><a href="https://colab.research.google.com/drive/1K61KI9zeGfhZ_HbNdXzvRR2zjS-Zfqho">Explorer Transportation Data Science Project</a> 1/25/2025</li>
-					<li><a href="https://jnpyles.github.io/share/pathfindingdemo.html">Pathfinding Demo (Python and Pygame)</a> 1/27/2024</li>
-					<li></li>
-					<li></li>
-				</ul>
-		</section>		
-    </div>
-</body>
-</html>
-
--->
+<h2>Recent Insights</h2>
+<ul>
+  {% for post in site.posts limit:3 %}
+    <li>
+      <a href="{{ post.external_url | default: post.url }}">{{ post.title }}</a> 
+      <small>({{ post.date | date: "%b %Y" }})</small>
+    </li>
+  {% endfor %}
+</ul>
