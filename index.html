@@ -5,16 +5,6 @@ title: Home
 
 <p>Hi, I'm Jonathon. I work at the intersection of AI development and enterprise risk (CRCM, CERP).</p> 
 
-<h2>Projects & Architecture</h2>
-<ul class="post-list">
-  {% for project in site.projects %}
-    <li>
-      <a href="{{ project.link | default: project.url }}">{{ project.title }}</a>
-      <span class="post-meta">{{ project.tools | join: " · " }}</span>
-    </li>
-  {% endfor %}
-</ul>
-
 <h2>Writing & Governance</h2>
 
 {% assign current_year = "" %}
@@ -31,7 +21,6 @@ title: Home
   
   <li>
     <span class="post-meta date-short">{{ post.date | date: "%d %b" }}</span>
-    
     <a href="{{ post.external_url | default: post.url }}">{{ post.title }}</a> 
     
     {% if post.tags.size > 0 %}
