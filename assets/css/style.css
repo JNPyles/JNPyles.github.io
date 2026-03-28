@@ -1,56 +1,83 @@
+/* Minimalist Base Variables */
 :root {
-    --bg: #ffffff;
-    --text: #222222;
-    --accent: #0066cc; /* Professional Blue */
-    --secondary: #666666;
-    --border: #eeeeee;
+  --bg: #ffffff;
+  --text: #111111;
+  --link: #0055cc;
+  --meta: #777777;
 }
 
-/* Automatic Dark Mode for Tech/AI vibes */
+/* Dark Mode Support (Nithin added this to his site in 2023) */
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #1a1a1a;
-        --text: #f0f0f0;
-        --accent: #4da6ff;
-        --secondary: #aaaaaa;
-        --border: #333333;
-    }
+  :root {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --link: #66b3ff;
+    --meta: #888888;
+  }
 }
 
 body {
-    max-width: 70ch;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-    line-height: 1.6;
-    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  max-width: 42rem; /* Keeps the line length perfect for reading */
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-h1, h2, h3 { 
-    color: var(--text); 
-    margin-top: 2.5rem;
+/* Typography */
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
 
-a { color: var(--accent); text-decoration-thickness: 1px; }
-a:hover { text-decoration: none; background: rgba(0, 102, 204, 0.1); }
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
 
-nav { 
-    border-bottom: 1px solid var(--border); 
-    padding-bottom: 1rem; 
-    margin-bottom: 3rem;
-    display: flex;
-    gap: 1rem;
+/* Links - Classic underline style */
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
-.project-tag {
-    font-size: 0.8rem;
-    background: var(--border);
-    padding: 2px 8px;
-    border-radius: 4px;
-    color: var(--secondary);
-    margin-left: 10px;
+a:hover {
+  text-decoration-thickness: 2px;
 }
 
-ul { list-style-type: none; padding: 0; }
-li { margin-bottom: 1rem; border-left: 2px solid var(--border); padding-left: 1rem; }
+/* Navigation */
+nav {
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Clean up lists so they look like plain text logs */
+ul.post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.post-list li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The date next to posts */
+.post-meta {
+  color: var(--meta);
+  font-size: 0.9rem;
+  font-family: monospace; /* Gives it a slight "terminal" feel */
+}

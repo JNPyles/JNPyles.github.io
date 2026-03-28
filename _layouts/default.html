@@ -7,23 +7,14 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <nav style="display: flex; justify-content: space-between; align-items: center;">
-        <div>
-            <strong><a href="/" style="color: var(--text); font-size: 1.2rem;">{{ site.title }}</a></strong>
-        </div>
-        <div style="display: flex; gap: 1.5rem;">
-            <a href="/about/">About</a>
-            <a href="https://www.linkedin.com/in/jonathonpyles/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/JNPyles" target="_blank">GitHub</a>
-        </div>
+    <nav>
+        <a href="/"><b>{{ site.title }}</b></a>
+        <a href="/about/">About</a>
+        <a href="https://github.com/JNPyles" target="_blank">GitHub</a>
     </nav>
 
     <main>
         {{ content }}
     </main>
-
-    <footer style="margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 1rem; color: var(--secondary); font-size: 0.9rem;">
-        <p>Portfolio last updated: {{ site.time | date: "%B %Y" }}</p>
-    </footer>
 </body>
 </html>

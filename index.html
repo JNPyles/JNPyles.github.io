@@ -3,31 +3,24 @@ layout: default
 title: Home
 ---
 
-<header style="margin-bottom: 3rem;">
-    <h1 style="margin-bottom: 0.5rem;">Bridging the gap between regulatory compliance and deep-tech AI development.</h1>
-    <p style="font-size: 1.2rem; color: var(--secondary);">
-        By combining enterprise risk frameworks (CRCM, CERP) with practical data science, I build automated solutions that are technically robust and strictly compliant with modern regulatory standards.
-    </p>
-</header>
+<p>Hi, I'm Jonathon. I work at the intersection of AI development and enterprise risk (CRCM, CERP).</p> 
 
-<h2>Featured AI & Tech Projects</h2>
-<ul>
-  {% for project in site.projects limit:3 %}
+<h2>Projects & Architecture</h2>
+<ul class="post-list">
+  {% for project in site.projects %}
     <li>
-      <strong><a href="{{ project.link }}">{{ project.title }}</a></strong>
-      {% for tool in project.tools %}
-        <span class="project-tag">{{ tool }}</span>
-      {% endfor %}
+      <a href="{{ project.link | default: project.url }}">{{ project.title }}</a>
+      <span class="post-meta">{{ project.tools | join: " · " }}</span>
     </li>
   {% endfor %}
 </ul>
 
-<h2>Recent Insights</h2>
-<ul>
-  {% for post in site.posts limit:3 %}
+<h2>Writing & Governance</h2>
+<ul class="post-list">
+  {% for post in site.posts %}
     <li>
       <a href="{{ post.external_url | default: post.url }}">{{ post.title }}</a> 
-      <small>({{ post.date | date: "%b %Y" }})</small>
+      <span class="post-meta">{{ post.date | date: "%d %b %Y" }}</span>
     </li>
   {% endfor %}
 </ul>
