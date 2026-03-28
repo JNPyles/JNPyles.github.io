@@ -1,8 +1,16 @@
-title: Jonathon Pyles Test
-email: your-email@example.com
-description: AI Development & Governance | CRCM | CERP
 linkedin_username: jonathonpyles
 github_username: JNPyles
+
+title: Jonathon Pyles
+description: AI Development & Governance | CRCM | CERP
+url: "https://jnpyles.github.io" # Your actual base URL without a trailing slash
+author:
+  name: Jonathon Pyles
+
+
+# Tell GitHub Pages to use the SEO plugin
+plugins:
+  - jekyll-seo-tag
 
 # This tells Jekyll how to handle your site
 theme: minima
