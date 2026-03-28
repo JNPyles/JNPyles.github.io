@@ -6,3 +6,7 @@ github_username: JNPyles
 
 # This tells Jekyll how to handle your site
 theme: minima
+
+collections:
+  projects:
+    output: true # This allows each project to have its own page
