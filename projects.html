@@ -5,32 +5,30 @@ permalink: /projects/
 ---
 
 <h1>AI & Data Projects</h1>
-<p>A collection of my technical work, Python scripts, and Colab notebooks focused on risk management and data analysis.</p>
+<p>A categorized collection of my technical work, Python scripts, and risk management pipelines.</p>
 
-{% assign current_year = "" %}
-
+{% assign raw_project_tags = "" | split: "" %}
 {% for project in site.projects %}
-  {% capture project_year %}{{ project.date | date: "%Y" }}{% endcapture %}
-  
-  {% if project_year != current_year %}
-    {% unless forloop.first %}</ul>{% endunless %}
-    <h3 class="year-heading">{{ project_year }}</h3>
-    <ul class="post-list year-grouped">
-    {% assign current_year = project_year %}
+  {% if project.tags %}
+    {% assign raw_project_tags = raw_project_tags | concat: project.tags %}
   {% endif %}
+{% endfor %}
+
+{% assign unique_project_tags = raw_project_tags | compact | uniq | sort %}
+
+{% for tag in unique_project_tags %}
   
-  <li>
-    <span class="post-meta date-short">{{ project.date | date: "%d %b" }}</span>
-    <a href="{{ project.link | default: project.url }}">{{ project.title }}</a> 
-    
-    {% if project.tools.size > 0 %}
-      <span class="post-meta tags-inline">
-        {% for tool in project.tools %}
-          <span class="tag-link">{{ tool }}</span>
-        {% endfor %}
-      </span>
-    {% endif %}
-  </li>
+  <h3 class="year-heading" id="{{ tag | slugify }}">#{{ tag }}</h3>
   
-  {% if forloop.last %}</ul>{% endif %}
+  <ul class="post-list year-grouped">
+    {% for project in site.projects %}
+      {% if project.tags contains tag %}
+        <li>
+          <span class="post-meta date-short">{{ project.date | date: "%Y" }}</span>
+          <a href="{{ project.link | default: project.url }}">{{ project.title }}</a> 
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
 {% endfor %}
