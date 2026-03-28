@@ -10,3 +10,5 @@ theme: minima
 collections:
   projects:
     output: true # This allows each project to have its own page
+
+permalink: /:title/
