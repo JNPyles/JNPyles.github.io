@@ -1,31 +1,59 @@
 ---
 layout: default
-title: Tags
+title: Topics & Tools
 permalink: /tags/
 ---
 
-<h1>Topics & Tags</h1>
+<h1>Topics & Tools</h1>
+
+{% assign raw_tags = "" | split: "|" %}
+
+{% for post in site.posts %}
+  {% if post.tags %}
+    {% assign raw_tags = raw_tags | concat: post.tags %}
+  {% endif %}
+{% endfor %}
+
+{% for project in site.projects %}
+  {% if project.tools %}
+    {% assign raw_tags = raw_tags | concat: project.tools %}
+  {% endif %}
+{% endfor %}
+
+{% assign unique_tags = raw_tags | compact | uniq | sort %}
 
 <div style="margin-bottom: 3rem; line-height: 2;">
-  {% assign sorted_tags = site.tags | sort %}
-  {% for tag in sorted_tags %}
-    <a href="#{{ tag[0] | slugify }}" style="margin-right: 15px; border-bottom: none;">
-      #{{ tag[0] }} <small>({{ tag[1].size }})</small>
+  {% for tag in unique_tags %}
+    <a href="#{{ tag | slugify }}" style="margin-right: 15px; border-bottom: none;" class="tag-link">
+      #{{ tag }}
     </a>
   {% endfor %}
 </div>
 
-{% for tag in sorted_tags %}
-  <h2 id="{{ tag[0] | slugify }}" style="padding-top: 2rem; border-top: 1px solid var(--border);">
-    #{{ tag[0] }}
+{% for tag in unique_tags %}
+  <h2 id="{{ tag | slugify }}" style="padding-top: 2rem; border-top: 1px solid var(--border);">
+    #{{ tag }}
   </h2>
   
   <ul class="post-list">
-    {% for post in tag[1] %}
-      <li>
-        <a href="{{ post.external_url | default: post.url }}">{{ post.title }}</a>
-        <span class="post-meta">{{ post.date | date: "%b %d, %Y" }}</span>
-      </li>
+    
+    {% for project in site.projects %}
+      {% if project.tools contains tag %}
+        <li>
+          <span class="post-meta date-short">Project</span>
+          <a href="{{ project.link | default: project.url }}">{{ project.title }}</a>
+        </li>
+      {% endif %}
     {% endfor %}
+
+    {% for post in site.posts %}
+      {% if post.tags contains tag %}
+        <li>
+          <span class="post-meta date-short">Article</span>
+          <a href="{{ post.external_url | default: post.url }}">{{ post.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    
   </ul>
 {% endfor %}
