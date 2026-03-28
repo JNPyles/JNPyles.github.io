@@ -1,0 +1,31 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<h1>Topics & Tags</h1>
+
+<div style="margin-bottom: 3rem; line-height: 2;">
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    <a href="#{{ tag[0] | slugify }}" style="margin-right: 15px; border-bottom: none;">
+      #{{ tag[0] }} <small>({{ tag[1].size }})</small>
+    </a>
+  {% endfor %}
+</div>
+
+{% for tag in sorted_tags %}
+  <h2 id="{{ tag[0] | slugify }}" style="padding-top: 2rem; border-top: 1px solid var(--border);">
+    #{{ tag[0] }}
+  </h2>
+  
+  <ul class="post-list">
+    {% for post in tag[1] %}
+      <li>
+        <a href="{{ post.external_url | default: post.url }}">{{ post.title }}</a>
+        <span class="post-meta">{{ post.date | date: "%b %d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
