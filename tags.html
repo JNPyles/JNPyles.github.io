@@ -6,21 +6,16 @@ permalink: /tags/
 
 <h1>Topics & Tools</h1>
 
-{% assign raw_tags = "" | split: "|" %}
+{% capture all_tags %}
+  {% for post in site.posts %}
+    {% for tag in post.tags %}{{ tag }}|{% endfor %}
+  {% endfor %}
+  {% for project in site.projects %}
+    {% for tool in project.tools %}{{ tool }}|{% endfor %}
+  {% endfor %}
+{% endcapture %}
 
-{% for post in site.posts %}
-  {% if post.tags %}
-    {% assign raw_tags = raw_tags | concat: post.tags %}
-  {% endif %}
-{% endfor %}
-
-{% for project in site.projects %}
-  {% if project.tools %}
-    {% assign raw_tags = raw_tags | concat: project.tools %}
-  {% endif %}
-{% endfor %}
-
-{% assign unique_tags = raw_tags | compact | uniq | sort %}
+{% assign unique_tags = all_tags | split: "|" | compact | uniq | sort %}
 
 <div style="margin-bottom: 3rem; line-height: 2;">
   {% for tag in unique_tags %}
