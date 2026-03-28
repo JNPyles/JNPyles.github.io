@@ -81,3 +81,54 @@ ul.post-list li {
   font-size: 0.9rem;
   font-family: monospace; /* Gives it a slight "terminal" feel */
 }
+/* Styling for the Year Headers */
+h3.year-heading {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Flexbox layout to align the date, title, and tags in a row */
+ul.year-grouped li {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+  flex-direction: row;
+}
+
+/* Fix the width of the date so all post titles align perfectly vertically */
+.date-short {
+  min-width: 65px;
+  font-family: monospace;
+  color: var(--meta);
+  flex-shrink: 0;
+}
+
+/* Push the tags slightly away from the title */
+.tags-inline {
+  margin-left: 0.8rem;
+  font-size: 0.85rem;
+}
+
+.tag-link {
+  color: var(--meta);
+  text-decoration: none;
+  margin-right: 0.4rem;
+}
+
+.tag-link:hover {
+  text-decoration: underline;
+}
+
+/* On mobile screens, let the tags drop to the next line if needed */
+@media (max-width: 600px) {
+  ul.year-grouped li {
+    flex-wrap: wrap;
+  }
+  .tags-inline {
+    margin-left: 65px; /* Aligns tags under the title on mobile */
+    width: 100%;
+  }
+}
