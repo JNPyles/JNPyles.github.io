@@ -1,1 +1,8 @@
-title: My AI Development & Governance Portfolio
+title: Jonathon Pyles Test
+email: your-email@example.com
+description: AI Development & Governance | CRCM | CERP
+linkedin_username: jonathonpyles
+github_username: JNPyles
+
+# This tells Jekyll how to handle your site
+theme: minima
