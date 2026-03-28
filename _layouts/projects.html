@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div style="margin-bottom: 3rem;">
+    <h1 style="margin-bottom: 0.5rem;">{{ page.title }}</h1>
+    
+    <div style="margin-bottom: 1.5rem;">
+        {% for tool in page.tools %}
+            <span class="project-tag">{{ tool }}</span>
+        {% endfor %}
+    </div>
+
+    <div style="display: flex; gap: 1rem;">
+        {% if page.colab_url %}
+            <a href="{{ page.colab_url }}" target="_blank" style="padding: 0.5rem 1rem; background: var(--accent); color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">Run in Google Colab</a>
+        {% endif %}
+        {% if page.github_url %}
+            <a href="{{ page.github_url }}" target="_blank" style="padding: 0.5rem 1rem; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; border-radius: 4px; font-weight: bold;">View on GitHub</a>
+        {% endif %}
+    </div>
+</div>
+
+<article style="border-top: 1px solid var(--border); padding-top: 2rem;">
+    {{ content }}
+</article>
+
+<div style="margin-top: 3rem;">
+    <a href="/">← Back to Home</a>
+</div>
