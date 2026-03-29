@@ -3,26 +3,39 @@ layout: default
 title: Projects
 permalink: /projects/
 ---
+{% assign sorted_categories = site.categories | sort %}
 
-<h1>AI & Data Projects</h1>
-<p>A collection of my technical work, Python scripts, and risk management pipelines.</p>
-
-<ul class="post-list year-grouped">
-  {% for project in site.posts %}
-    
-    {% if project.layout == 'project' %}
-      <li>
-        <a href="{{ project.link | default: project.url }}">{{ project.title }}</a> 
-        
-        {% if project.tags.size > 0 %}
-          <span class="post-meta tags-inline">
-            {% for tag in project.tags %}
-              <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
-            {% endfor %}
-          </span>
-        {% endif %}
-      </li>
+{% for category in sorted_categories %}
+  {% assign cat_name = category[0] %}
+  {% assign cat_posts = category[1] %}
+  
+  {% assign has_projects = false %}
+  {% for post in cat_posts %}
+    {% if post.layout == 'project' %}
+      {% assign has_projects = true %}
     {% endif %}
-    
   {% endfor %}
-</ul>
+  
+  {% if has_projects %}
+    <h3 class="year-heading" id="{{ cat_name | slugify }}">{{ cat_name }}</h3>
+    
+    <ul class="post-list year-grouped">
+      {% for post in cat_posts %}
+        {% if post.layout == 'project' %}
+          <li>
+            <a href="{{ post.link | default: post.url }}">{{ post.title }}</a> 
+            
+            {% if post.tags.size > 0 %}
+              <span class="post-meta tags-inline">
+                {% for tag in post.tags %}
+                  <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
+                {% endfor %}
+              </span>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+{% endfor %}

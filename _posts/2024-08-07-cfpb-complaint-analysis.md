@@ -4,6 +4,7 @@ title: "Using Python to Explore CFPB Complaint Data"
 date: 2024-08-07
 description: "How I built a Python pipeline to automate the extraction and analysis of massive CFPB complaint datasets for proactive risk management."
 image: "/assets/images/cfpb-project-preview.png" 
+category: AI
 tags: [Python, Pandas, Matplotlib, Regulatory Tech]
 colab_url: "https://colab.research.google.com/your-actual-link-here"
 github_url: "https://github.com/JNPyles/your-repo-link"
