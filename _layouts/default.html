@@ -8,13 +8,23 @@
 </head>
 <body>
     <nav>
-        <a href="/"><b>{{ site.title }}</b></a>
-        <a href="/projects/">Projects</a>
-        <a href="/about/">About</a>
+        <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">
+            <b>{{ site.title }}</b>
+        </a>
+        
+        <a href="/projects/" class="{% if page.url contains '/projects/' %}active{% endif %}">
+            Projects
+        </a>
+        
+        <a href="/about/" class="{% if page.url contains '/about/' %}active{% endif %}">
+            About
+        </a>
+        
         <a href="https://github.com/JNPyles" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/jonathonpyles/" target="_blank">LinkedIn</a>
-    </nav>
 
+        <a href="https://www.linkedin.com/in/jonathonpyles/" target="_blank">LinkedIn</a>
+
+       </nav>
     <main>
         {{ content }}
     </main>
