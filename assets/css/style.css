@@ -1,19 +1,11 @@
-/* Minimalist Base Variables */
+/* Minimalist Base Variables (Permanent Dark Mode) */
 :root {
-  --bg: #ffffff;
-  --text: #111111;
-  --link: #0055cc;
-  --meta: #777777;
-}
-
-/* Dark Mode Support (Nithin added this to his site in 2023) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121212;
-    --text: #e0e0e0;
-    --link: #66b3ff;
-    --meta: #888888;
-  }
+  --bg: #121212;
+  --text: #e0e0e0;
+  --link: #66b3ff;
+  --meta: #888888;
+  --tooltip-bg: #f9f9f9; 
+  --tooltip-text: #333333;
 }
 
 body {
@@ -85,8 +77,9 @@ nav .nav-links a.active {
 
 /* Make the icons bigger and add a smooth transition */
 .nav-icons svg {
-    width: 32px;  /* Adjust this to change size */
+    width: 32px;  
     height: 32px;
+    fill: var(--text); /* Forces icons to use the light grey text color */
     transition: transform 0.2s ease-in-out, fill 0.2s;
 }
 
@@ -103,13 +96,13 @@ nav .nav-links a.active {
 }
 
 .nav-icons a::after {
-    content: attr(aria-label); /* Pulls text from your aria-label */
+    content: attr(aria-label); 
     position: absolute;
-    bottom: -35px;            /* Position below the icon */
+    bottom: -35px;            
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--tooltip-bg); 
+    color: var(--tooltip-text);          
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 12px;
@@ -123,7 +116,7 @@ nav .nav-links a.active {
 /* Show the name when hovering */
 .nav-icons a:hover::after {
     opacity: 1;
-    bottom: -40px; /* Slight movement upward on hover */
+    bottom: -40px; 
 }
 
 /* Clean up lists so they look like plain text logs */
@@ -144,6 +137,7 @@ ul.post-list li {
   font-size: 0.9rem;
   font-family: monospace; /* Gives it a slight "terminal" feel */
 }
+
 /* Styling for the Year Headers */
 h3.year-heading {
   font-size: 1.2rem;
