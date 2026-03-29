@@ -3,6 +3,8 @@ layout: post
 title: "A Framework for Generative AI Governance"
 date: 2026-03-27
 tags: [governance, risk, llm]
+category: Education
+
 ---
 
 ## The Challenge
