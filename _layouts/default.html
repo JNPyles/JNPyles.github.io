@@ -7,22 +7,6 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <nav class="site-nav">
-        <div class="nav-links">
-            <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">
-                <b>{{ site.title }}</b>
-            </a>
-            <a href="/articles/" class="{% if page.url contains '/articles/' %}active{% endif %}">
-                Articles
-            </a>
-            <a href="/projects/" class="{% if page.url contains '/projects/' %}active{% endif %}">
-                Projects
-            </a>
-            <a href="/about/" class="{% if page.url contains '/about/' %}active{% endif %}">
-                About
-            </a>
-        </div>
-    </nav>
     <div class="nav-icons">
         <a href="https://github.com/JNPyles" target="_blank" aria-label="GitHub">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -42,6 +26,23 @@
             </svg>
         </a>
     </div>
+    <nav class="site-nav">
+        <div class="nav-links">
+            <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">
+                <b>{{ site.title }}</b>
+            </a>
+            <a href="/articles/" class="{% if page.url contains '/articles/' %}active{% endif %}">
+                Articles
+            </a>
+            <a href="/projects/" class="{% if page.url contains '/projects/' %}active{% endif %}">
+                Projects
+            </a>
+            <a href="/about/" class="{% if page.url contains '/about/' %}active{% endif %}">
+                About
+            </a>
+        </div>
+    </nav>
+
     <main>
         {{ content }}
     </main>
