@@ -76,31 +76,54 @@ nav .nav-links a.active {
   text-underline-offset: 4px;
 }
 
-/* Icon Links Styling */
-nav .nav-icons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+/* Container for the icons */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
-nav .nav-icons a {
-  display: flex; /* Helps align the SVG perfectly */
-  color: var(--text); /* Matches your light/dark mode text color */
+/* Make the icons bigger and add a smooth transition */
+.nav-icons svg {
+    width: 32px;  /* Adjust this to change size */
+    height: 32px;
+    transition: transform 0.2s ease-in-out, fill 0.2s;
 }
 
-nav .nav-icons svg {
-  width: 22px;
-  height: 22px;
-  fill: currentColor; /* Inherits the color from the <a> tag */
-  transition: opacity 0.2s ease;
+/* Hover effect: Scale up slightly */
+.nav-icons a:hover svg {
+    transform: scale(1.15);
 }
 
-nav .nav-icons a:hover {
-  text-decoration: none; /* Prevents underlines on the icons */
+/* The "Tooltip" - shows the name on hover */
+.nav-icons a {
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
 }
 
-nav .nav-icons a:hover svg {
-  opacity: 0.6; /* Creates a nice fade effect on hover */
+.nav-icons a::after {
+    content: attr(aria-label); /* Pulls text from your aria-label */
+    position: absolute;
+    bottom: -35px;            /* Position below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, bottom 0.2s ease;
+    z-index: 10;
+}
+
+/* Show the name when hovering */
+.nav-icons a:hover::after {
+    opacity: 1;
+    bottom: -40px; /* Slight movement upward on hover */
 }
 
 /* Clean up lists so they look like plain text logs */
