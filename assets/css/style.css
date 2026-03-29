@@ -50,25 +50,57 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 
-/* Navigation */
-nav {
-  margin-bottom: 3rem;
+/* Navigation Container */
+nav.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes links left and icons right */
+  margin-bottom: 4rem;
   font-size: 1.1rem;
 }
-nav a {
-  margin-right: 1rem;
+
+nav .nav-links a {
+  margin-right: 1.2rem;
   text-decoration: none;
 }
-nav a:hover {
+
+nav .nav-links a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
 
-nav a.active {
+nav .nav-links a.active {
   text-decoration: underline;
-  text-decoration-thickness: 2px; /* Makes the active line slightly bolder than the hover line */
-  text-underline-offset: 4px;    /* Pushes the line down slightly so it clears letters like 'y' and 'p' */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Icon Links Styling */
+nav .nav-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+nav .nav-icons a {
+  display: flex; /* Helps align the SVG perfectly */
+  color: var(--text); /* Matches your light/dark mode text color */
+}
+
+nav .nav-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor; /* Inherits the color from the <a> tag */
+  transition: opacity 0.2s ease;
+}
+
+nav .nav-icons a:hover {
+  text-decoration: none; /* Prevents underlines on the icons */
+}
+
+nav .nav-icons a:hover svg {
+  opacity: 0.6; /* Creates a nice fade effect on hover */
 }
 
 /* Clean up lists so they look like plain text logs */

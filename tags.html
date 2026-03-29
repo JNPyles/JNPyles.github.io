@@ -1,31 +1,28 @@
 ---
 layout: default
-title: Topics & Tools
+title: Topics & Tags
 permalink: /tags/
 ---
 
-<h1>Topics & Tools</h1>
+<h1>Topics & Tags</h1>
 
-{% capture all_tags %}
-  {% for post in site.posts %}
-    {% for tag in post.tags %}{{ tag }}|{% endfor %}
-  {% endfor %}
-  {% for project in site.projects %}
-    {% for tag in project.tags %}{{ tag }}|{% endfor %}
-  {% endfor %}
-{% endcapture %}
+{% assign post_tags = site.posts | map: "tags" | join: "," | split: "," %}
+{% assign proj_tags = site.projects | map: "tags" | join: "," | split: "," %}
 
-{% assign unique_tags = all_tags | split: "|" | compact | uniq | sort %}
+{% assign raw_tags = post_tags | concat: proj_tags | compact | uniq | sort %}
 
 <div style="margin-bottom: 3rem; line-height: 2;">
-  {% for tag in unique_tags %}
-    <a href="#{{ tag | slugify }}" style="margin-right: 15px; border-bottom: none;" class="tag-link">
-      #{{ tag }}
-    </a>
+  {% for tag in raw_tags %}
+    {% if tag != "" %} <a href="#{{ tag | slugify }}" style="margin-right: 15px; border-bottom: none;" class="tag-link">
+        #{{ tag }}
+      </a>
+    {% endif %}
   {% endfor %}
 </div>
 
-{% for tag in unique_tags %}
+{% for tag in raw_tags %}
+  {% if tag != "" %}
+  
   <h2 id="{{ tag | slugify }}" style="padding-top: 2rem; border-top: 1px solid var(--border);">
     #{{ tag }}
   </h2>
@@ -33,7 +30,7 @@ permalink: /tags/
   <ul class="post-list">
     
     {% for project in site.projects %}
-      {% if project.tools contains tag %}
+      {% if project.tags contains tag %}
         <li>
           <span class="post-meta date-short">Project</span>
           <a href="{{ project.link | default: project.url }}">{{ project.title }}</a>
@@ -51,4 +48,6 @@ permalink: /tags/
     {% endfor %}
     
   </ul>
+  
+  {% endif %}
 {% endfor %}
