@@ -4,7 +4,7 @@ title: "A Framework for Generative AI Governance"
 date: 2026-03-27
 tags: [governance, risk, llm]
 category: Education
-
+linkedin_url: https://www.linkedin.com/pulse/using-ai-summarize-1100-complaints-30-minutes-jonathon-pyles-adlgc/
 ---
 
 ## The Challenge

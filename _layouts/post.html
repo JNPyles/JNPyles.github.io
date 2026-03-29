@@ -1,12 +1,33 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p class="post-date">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+<header style="margin-bottom: 2.5rem;">
+    <h1 style="margin-bottom: 0.5rem; margin-top: 0;">{{ page.title }}</h1>
+    
+    <div style="font-family: monospace; color: var(--meta); font-size: 0.9rem; margin-bottom: 1.5rem;">
+        Article | 
+        {% if page.tags.size > 0 %}
+            {{ page.tags | join: " · " }}
+        {% endif %}
+    </div>
+
+    <div style="display: flex; gap: 1.5rem; font-size: 0.95rem;">
+        {% if page.colab_url %}
+            <a href="{{ page.colab_url }}" target="_blank">Run in Google Colab ↗</a>
+        {% endif %}
+        {% if page.github_url %}
+            <a href="{{ page.github_url }}" target="_blank">View on GitHub ↗</a>
+        {% endif %}
+        {% if page.linkedin_url %}
+            <a href="{{ page.linkedin_url }}" target="_blank">View on LinkedIn ↗</a>
+        {% endif %}
+    </div>
+</header>
 
 <article>
-  {{ content }}
+    {{ content }}
 </article>
 
-<hr>
-<a href="/">← Back to Home</a>
+<div style="margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+    <a href="/articles/">← Back to Articles</a>
+</div>
