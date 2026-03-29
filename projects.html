@@ -8,16 +8,16 @@ permalink: /projects/
 <p>A collection of my technical work, Python scripts, and risk management pipelines.</p>
 
 <ul class="post-list year-grouped">
-  {% for project in site.projects | sort: "date" | reverse %}
+  {% for project in site.projects | sort: "date" %}
     <li>
-      <span class="post-meta date-short">{{ project.date | date: "%Y" }}</span>
-      
       <a href="{{ project.link | default: project.url }}">{{ project.title }}</a> 
       
-      {% if project.tags.size > 0 %}
+      {% assign display_tags = project.tags | default: project.tools %}
+      
+      {% if display_tags.size > 0 %}
         <span class="post-meta tags-inline">
-          {% for tag in project.tags %}
-            <a href="/tags/#{{ tag | slugify }}" class="tag-link">{{ tag }}</a>
+          {% for tag in display_tags %}
+            <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
           {% endfor %}
         </span>
       {% endif %}
