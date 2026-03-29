@@ -7,14 +7,13 @@ permalink: /projects/
 <h1>AI & Data Projects</h1>
 <p>A categorized collection of my technical work, Python scripts, and risk management pipelines.</p>
 
-{% assign raw_project_tags = "" | split: "" %}
-{% for project in site.projects %}
-  {% if project.tags %}
-    {% assign raw_project_tags = raw_project_tags | concat: project.tags %}
-  {% endif %}
-{% endfor %}
+{% capture all_project_tags %}
+  {% for project in site.projects %}
+    {% for tag in project.tags %}{{ tag }}|{% endfor %}
+  {% endfor %}
+{% endcapture %}
 
-{% assign unique_project_tags = raw_project_tags | compact | uniq | sort %}
+{% assign unique_project_tags = all_project_tags | split: "|" | compact | uniq | sort %}
 
 {% for tag in unique_project_tags %}
   
