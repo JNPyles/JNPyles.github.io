@@ -11,7 +11,7 @@ permalink: /tags/
 <div style="margin-bottom: 3rem; line-height: 2;">
   {% for tag in sorted_tags %}
     <a href="#{{ tag[0] | slugify }}" style="margin-right: 15px; border-bottom: none;" class="tag-link">
-      #{{ tag[0] }}
+      #{{ tag[0] }} <small>({{ tag[1].size }})</small>
     </a>
   {% endfor %}
 </div>
@@ -24,13 +24,15 @@ permalink: /tags/
   <ul class="post-list">
     {% for post in tag[1] %}
       <li>
-        {% if post.category == 'project' %}
+        
+        {% if post.layout == 'project' %}
             <span class="post-meta date-short" style="color: var(--link);">Project</span>
         {% else %}
             <span class="post-meta date-short">Article</span>
         {% endif %}
         
         <a href="{{ post.external_url | default: post.link | default: post.url }}">{{ post.title }}</a>
+        
       </li>
     {% endfor %}
   </ul>

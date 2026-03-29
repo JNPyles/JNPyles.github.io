@@ -8,17 +8,21 @@ permalink: /projects/
 <p>A collection of my technical work, Python scripts, and risk management pipelines.</p>
 
 <ul class="post-list year-grouped">
-  {% for project in site.categories.project %}
-    <li>
-      <a href="{{ project.link | default: project.url }}">{{ project.title }}</a> 
-      
-      {% if project.tags.size > 0 %}
-        <span class="post-meta tags-inline">
-          {% for tag in project.tags %}
-            <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
-          {% endfor %}
-        </span>
-      {% endif %}
-    </li>
+  {% for project in site.posts %}
+    
+    {% if project.layout == 'project' %}
+      <li>
+        <a href="{{ project.link | default: project.url }}">{{ project.title }}</a> 
+        
+        {% if project.tags.size > 0 %}
+          <span class="post-meta tags-inline">
+            {% for tag in project.tags %}
+              <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
+            {% endfor %}
+          </span>
+        {% endif %}
+      </li>
+    {% endif %}
+    
   {% endfor %}
 </ul>
