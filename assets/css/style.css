@@ -130,25 +130,29 @@ h3.year-heading {
   font-weight: 600;
 }
 
-/* Flexbox layout to align the date, title, and tags in a row */
+/* Flexbox layout to align the date and the content block */
 ul.year-grouped li {
   display: flex;
   align-items: baseline;
   margin-bottom: 0.6rem;
-  flex-direction: row;
 }
 
-/* Fix the width of the date so all post titles align perfectly vertically */
+/* Fix the width of the date so titles align perfectly vertically */
 .date-short {
   min-width: 65px;
+  flex-shrink: 0;
   font-family: monospace;
   color: var(--meta);
-  flex-shrink: 0;
 }
 
-/* Push the tags slightly away from the title */
+/* Groups the title and tags together so they flow like a sentence */
+.title-and-tags {
+  display: inline;
+}
+
+/* Spaces the tags slightly away from the end of the title */
 .tags-inline {
-  margin-left: 0.8rem;
+  margin-left: 0.5rem; 
   font-size: 0.85rem;
 }
 
@@ -160,15 +164,4 @@ ul.year-grouped li {
 
 .tag-link:hover {
   text-decoration: underline;
-}
-
-/* On mobile screens, let the tags drop to the next line if needed */
-@media (max-width: 600px) {
-  ul.year-grouped li {
-    flex-wrap: wrap;
-  }
-  .tags-inline {
-    margin-left: 65px; /* Aligns tags under the title on mobile */
-    width: 100%;
-  }
 }

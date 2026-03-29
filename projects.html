@@ -23,15 +23,17 @@ permalink: /projects/
       {% for post in cat_posts %}
         {% if post.layout == 'project' %}
           <li>
-            <a href="{{ post.link | default: post.url }}">{{ post.title }}</a> 
-            
-            {% if post.tags.size > 0 %}
-              <span class="post-meta tags-inline">
-                {% for tag in post.tags %}
-                  <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
-                {% endfor %}
-              </span>
-            {% endif %}
+            <span class="title-and-tags">
+              <a href="{{ post.link | default: post.url }}">{{ post.title }}</a> 
+              
+              {% if post.tags.size > 0 %}
+                <span class="post-meta tags-inline">
+                  {% for tag in post.tags %}
+                    <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
+                  {% endfor %}
+                </span>
+              {% endif %}
+            </span>
           </li>
         {% endif %}
       {% endfor %}
