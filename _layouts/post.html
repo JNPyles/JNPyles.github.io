@@ -6,6 +6,7 @@ layout: default
     
     <div style="font-family: monospace; color: var(--meta); font-size: 0.9rem; margin-bottom: 1.5rem;">
         Article | 
+        {{ item.title }} | 
         {% if page.tags.size > 0 %}
             {{ page.tags | join: " · " }}
         {% endif %}
