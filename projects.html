@@ -8,15 +8,13 @@ permalink: /projects/
 <p>A collection of my technical work, Python scripts, and risk management pipelines.</p>
 
 <ul class="post-list year-grouped">
-  {% for project in site.projects | sort: "date" %}
+  {% for project in site.categories.project %}
     <li>
       <a href="{{ project.link | default: project.url }}">{{ project.title }}</a> 
       
-      {% assign display_tags = project.tags | default: project.tools %}
-      
-      {% if display_tags.size > 0 %}
+      {% if project.tags.size > 0 %}
         <span class="post-meta tags-inline">
-          {% for tag in display_tags %}
+          {% for tag in project.tags %}
             <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
           {% endfor %}
         </span>

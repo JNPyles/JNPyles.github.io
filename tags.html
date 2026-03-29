@@ -6,48 +6,32 @@ permalink: /tags/
 
 <h1>Topics & Tags</h1>
 
-{% assign post_tags = site.posts | map: "tags" | join: "," | split: "," %}
-{% assign proj_tags = site.projects | map: "tags" | join: "," | split: "," %}
-
-{% assign raw_tags = post_tags | concat: proj_tags | compact | uniq | sort %}
+{% assign sorted_tags = site.tags | sort %}
 
 <div style="margin-bottom: 3rem; line-height: 2;">
-  {% for tag in raw_tags %}
-    {% if tag != "" %} <a href="#{{ tag | slugify }}" style="margin-right: 15px; border-bottom: none;" class="tag-link">
-        #{{ tag }}
-      </a>
-    {% endif %}
+  {% for tag in sorted_tags %}
+    <a href="#{{ tag[0] | slugify }}" style="margin-right: 15px; border-bottom: none;" class="tag-link">
+      #{{ tag[0] }}
+    </a>
   {% endfor %}
 </div>
 
-{% for tag in raw_tags %}
-  {% if tag != "" %}
-  
-  <h2 id="{{ tag | slugify }}" style="padding-top: 2rem; border-top: 1px solid var(--border);">
-    #{{ tag }}
+{% for tag in sorted_tags %}
+  <h2 id="{{ tag[0] | slugify }}" style="padding-top: 2rem; border-top: 1px solid var(--border);">
+    #{{ tag[0] }}
   </h2>
   
   <ul class="post-list">
-    
-    {% for project in site.projects %}
-      {% if project.tags contains tag %}
-        <li>
-          <span class="post-meta date-short">Project</span>
-          <a href="{{ project.link | default: project.url }}">{{ project.title }}</a>
-        </li>
-      {% endif %}
+    {% for post in tag[1] %}
+      <li>
+        {% if post.category == 'project' %}
+            <span class="post-meta date-short" style="color: var(--link);">Project</span>
+        {% else %}
+            <span class="post-meta date-short">Article</span>
+        {% endif %}
+        
+        <a href="{{ post.external_url | default: post.link | default: post.url }}">{{ post.title }}</a>
+      </li>
     {% endfor %}
-
-    {% for post in site.posts %}
-      {% if post.tags contains tag %}
-        <li>
-          <span class="post-meta date-short">Article</span>
-          <a href="{{ post.external_url | default: post.url }}">{{ post.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-    
   </ul>
-  
-  {% endif %}
 {% endfor %}
