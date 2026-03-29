@@ -2,8 +2,9 @@
 layout: project
 title: "Building an 8-Bit Breadboard Computer: Logic Gates and Wire Spells"
 date: 2025-05-21
-categories: [project]
-tags: [electronics, 74-series, 8-bit, breadboard-computer, hardware-design, SAP-1, 74LS189, 74LS283]
+categories: [educational]
+tags: [computers]
+github_url: "https://github.com/JNPyles/8-Bit-Breadboard-Computer-Project"
 description: "A deep dive into the construction of a functional 8-bit CPU built entirely from discrete 74-series logic gates on breadboards."
 ---
 
