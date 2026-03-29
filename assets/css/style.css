@@ -61,6 +61,14 @@ nav a {
 }
 nav a:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+nav a.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* Makes the active line slightly bolder than the hover line */
+  text-underline-offset: 4px;    /* Pushes the line down slightly so it clears letters like 'y' and 'p' */
 }
 
 /* Clean up lists so they look like plain text logs */
