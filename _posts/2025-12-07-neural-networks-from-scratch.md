@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Neural Networks from Scratch"
-date: 2026-03-29
+date: 2025-12-07
 categories: [Educational]
 tags: [In Progress, Neural Networks, Deep Learning, Python]
 github_url: https://github.com/JNPyles/Neural-Networks-from-Scratch
