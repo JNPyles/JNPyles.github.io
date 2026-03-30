@@ -10,7 +10,7 @@ linkedin_url: https://www.linkedin.com/pulse/using-ai-summarize-1100-complaints-
 ## The Challenge
 As organizations adopt LLMs, the risk profile shifts from traditional software to probabilistic outputs...
 
-    '''# Libariers for reading, manipulating, and visualizing data
+    ```# Libariers for reading, manipulating, and visualizing data
     import pandas as pd
     import numpy as np
     import matplotlib.pyplot as plt
@@ -39,7 +39,7 @@ As organizations adopt LLMs, the risk profile shifts from traditional software t
 
     # Library to avoid the warnings
     import warnings
-    warnings.filterwarnings("ignore")'''
+    warnings.filterwarnings("ignore")```
 
 ### Key Pillars
 1. **Human-in-the-loop** verification.
