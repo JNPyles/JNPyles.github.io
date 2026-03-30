@@ -12,12 +12,19 @@ author:
 plugins:
   - jekyll-seo-tag
 
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 # This tells Jekyll how to handle your site
 theme: minima
 
 collections:
   projects:
-    output: true # This allows each project to have its own page
+    output: true
+    permalink: /projects/:title/
 
 permalink: /:title/
 highlighter: rouge
