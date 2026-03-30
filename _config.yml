@@ -20,3 +20,4 @@ collections:
     output: true # This allows each project to have its own page
 
 permalink: /:title/
+highlighter: rouge
