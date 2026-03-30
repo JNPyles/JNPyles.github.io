@@ -201,3 +201,7 @@ pre {
 .highlight .string  { color: #7ec699; }
 .highlight .number  { color: #f08d49; }
 .highlight .function { color: #f8c555; }
+
+pre code.hljs {
+  font-size: 0.85em;
+}
