@@ -21,11 +21,6 @@ kramdown:
 # This tells Jekyll how to handle your site
 theme: minima
 
-collections:
-  projects:
-    output: true
-    permalink: /projects/:title/
-
 permalink: /:title/
 highlighter: rouge
 
