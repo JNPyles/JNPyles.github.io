@@ -9,13 +9,59 @@ description: "Practice using Python's data visualization libraries, includiong N
 ---
 
 # Setup
-
+To begin, I import the Python libraries I will use. 
 ```
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+```
+
+# Data
+I used a database containing automobile information.
+
+```
 df = pd.read_csv('/Automobile.csv')
+df.head()
+df.shape()
+df.info()
+```
+![Automobile table head]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/automobile-table-head.webp)
+
+```
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 201 entries, 0 to 200
+Data columns (total 26 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   symboling            201 non-null    int64  
+ 1   normalized_losses    201 non-null    int64  
+ 2   make                 201 non-null    object 
+ 3   fuel_type            201 non-null    object 
+ 4   aspiration           201 non-null    object 
+ 5   number_of_doors      201 non-null    object 
+ 6   body_style           201 non-null    object 
+ 7   drive_wheels         201 non-null    object 
+ 8   engine_location      201 non-null    object 
+ 9   wheel_base           201 non-null    float64
+ 10  length               201 non-null    float64
+ 11  width                201 non-null    float64
+ 12  height               201 non-null    float64
+ 13  curb_weight          201 non-null    int64  
+ 14  engine_type          201 non-null    object 
+ 15  number_of_cylinders  201 non-null    object 
+ 16  engine_size          201 non-null    int64  
+ 17  fuel_system          201 non-null    object 
+ 18  bore                 201 non-null    float64
+ 19  stroke               201 non-null    float64
+ 20  compression_ratio    201 non-null    float64
+ 21  horsepower           201 non-null    int64  
+ 22  peak_rpm             201 non-null    int64  
+ 23  city_mpg             201 non-null    int64  
+ 24  highway_mpg          201 non-null    int64  
+ 25  price                201 non-null    int64  
+dtypes: float64(7), int64(9), object(10)
+memory usage: 41.0+ KB
 ```
 
 # Exploring the Data
