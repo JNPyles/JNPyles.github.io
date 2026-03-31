@@ -15,17 +15,20 @@ title: Home
   {% endif %}
   
 		<li>
-						<span class="post-meta date-short">{{ item.date | date: "%d %b" }} | {{ item.layout }}</span>
-						
-						<span class="title-and-tags">
-								<a href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }}</a> 
-								
-								{% if item.tags.size > 0 %}
+						<span class="post-meta date-short">
+							{{ item.date | date: "%d %b" }} | {{ item.layout }}
+										{% if item.tags.size > 0 %}
 										<span class="post-meta tags-inline">
 												{% for tag in item.tags %}
 														<a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
 												{% endfor %}
 										</span>
+						</span>
+						
+						<span class="title-and-tags">
+								<a href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }}</a> 
+								
+
 								{% endif %}
 						</span>
 				</li>
