@@ -24,3 +24,5 @@ df = pd.read_csv('/Automobile.csv')
 df.head()
 ```
 
+## Histogram 
+![Price Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram.webp)
