@@ -9,7 +9,11 @@ description: "Practice using Python's data visualization libraries, includiong N
 ---
 
 # Setup
-To begin, I import the Python libraries I will use. 
+To begin, I imported the Python libraries I will use for this project:
+- Numpy for calculations. 
+- Pandas for managing the data.
+- Matplotlib and Seaborn for visualizations. 
+
 ```
 import numpy as np
 import pandas as pd
@@ -32,10 +36,8 @@ df.head()
 ```
 ![Automobile table head]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/automobile-table-head.webp)
 
-```
-
 The shape function tells me that the data consists of 201 rows and 26 columns. 
-
+```
 df.shape()
 >>> (201,26)
 ```
@@ -84,9 +86,45 @@ The describe() function provides statistical information for each colum (e.g. me
 
 I used Seaborn to create graphs to visualize the data. 
 
-The histplot() function produces a histogram. I used the 'price' column for the x axis, resulting in a histogram that groups the 201 automobiles by price.  
+### Histogram
+
+The histplot() function produces a histogram. I used the 'price' column for the x axis, resulting in a histogram that groups the automobiles (the 201 rows) by price.  
 
 ```
 sns.histplot(data=df, x='price')
 ```
 ![Price Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram.webp)
+
+I improved the appearance of the graph by including additional parameters (e.g. title, x and y axis labels, and custom coloring).
+
+```
+plt.title('Histogram: Price')
+plt.xlim(3000,47000)
+plt.ylim(0,70)
+plt.xlabel('Price of Cars')
+plt.ylabel('Frequency')
+sns.histplot(data=df, x='price', color='orange')
+```
+![Price Histogram Improved]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram-improved.webp)
+
+I further enhanced the graph with information on body style. 
+```
+sns.histplot(data=df, x='price', kde=True, hue='body_style')
+```
+![Price Histogram Improved with Body Styles]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram-improved-body-type.webp)
+
+I used the FacetGrid() function to create price histograms for each body style. 
+
+```
+g = sns.FacetGrid(df, col="body_style")
+g.map(sns.histplot, "price")
+```
+![Price Histogram Facet Grid]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram-facetgrid-body-style.webp)
+
+### Box Plot
+
+I used the boxplot() function to create a box plot for each body style. 
+```
+sns.boxplot(data=df, x='body_style', y='price')
+```
+![Boxplot Body Styles]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/boxplot-body-styles.webp)
