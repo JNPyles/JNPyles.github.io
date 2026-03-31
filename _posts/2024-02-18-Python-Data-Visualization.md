@@ -17,14 +17,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
-# Data
+# Understanding the Data
 The data is a CSV file contaniing information on various automobiles (make, engine type, mpg, etc.). I imported the data into a pandas dataframe. 
 ```
 df = pd.read_csv('/Automobile.csv')
 ```
 
-To get a quick understanding of the data, I used the head(), shape((), and info() functions.
+To get a quick understanding of the data, I used the head(), shape(), info(), and describe() functions.
 
+The head() function shows the first five rows by default. 
 ```
 df.head()
 >>>
@@ -32,10 +33,14 @@ df.head()
 ![Automobile table head]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/automobile-table-head.webp)
 
 ```
+
+The shape function tells me that the data consists of 201 rows and 26 columns. 
+
 df.shape()
 >>> (201,26)
 ```
 
+The info() function displays the name, count, and data type for each column. 
 ```
 df.info()
 >>>
@@ -72,12 +77,16 @@ Data columns (total 26 columns):
 dtypes: float64(7), int64(9), object(10)
 memory usage: 41.0+ KB
 ```
+The describe() function provides statistical information for each colum (e.g. mean, standard deviation, quartiles, etc.)
+![Automobile Data Description]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/automobile-data-description.webp)
 
-# Exploring the Data
+## Visualizing the Data 
+
+I used Seaborn to create graphs to visualize the data. 
+
+The histplot() function produces a histogram. I used the 'price' column for the x axis, resulting in a histogram that groups the 201 automobiles by price.  
 
 ```
-df.head()
+sns.histplot(data=df, x='price')
 ```
-
-## Histogram 
 ![Price Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram.webp)
