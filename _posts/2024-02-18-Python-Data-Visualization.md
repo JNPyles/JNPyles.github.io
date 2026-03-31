@@ -18,18 +18,27 @@ import seaborn as sns
 ```
 
 # Data
-I used a database containing automobile information.
-
+The data is a CSV file contaniing information on various automobiles (make, engine type, mpg, etc.). I imported the data into a pandas dataframe. 
 ```
 df = pd.read_csv('/Automobile.csv')
+```
+
+To get a quick understanding of the data, I used the head(), shape((), and info() functions.
+
+```
 df.head()
-df.shape()
-df.info()
+>>>
 ```
 ![Automobile table head]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/automobile-table-head.webp)
 
 ```
-<class 'pandas.core.frame.DataFrame'>
+df.shape()
+>>> (201,26)
+```
+
+```
+df.info()
+>>>
 RangeIndex: 201 entries, 0 to 200
 Data columns (total 26 columns):
  #   Column               Non-Null Count  Dtype  
