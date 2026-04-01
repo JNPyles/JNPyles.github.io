@@ -8,8 +8,6 @@ description: "Practice using Python's data visualization libraries."
 excerpt: "In this project, I practice using Python to visualize data." 
 image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 ---
-![Title image - Data Visualization with Python]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg)
-
 # Project Overview
 My goal for this project was to get hands-on practice visualizing data using Python.  
 
