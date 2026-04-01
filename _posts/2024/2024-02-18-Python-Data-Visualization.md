@@ -5,7 +5,8 @@ date: 2024-02-18
 category: [Data Analytics]
 tags: [Complete,Python]
 description: "Practice using Python's data visualization libraries."
-image: /assets/images/2024-02-18-Python-Data-Visualization/price-histogram-improved.webp
+excerpt: "In this project, I practice using Python to visualize data." 
+image: /assets/images/2024-02-18-Python-Data-Visualization/post-featured-image.webp
 ---
 
 # Setup
