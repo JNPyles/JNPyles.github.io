@@ -3,8 +3,9 @@ layout: project
 title: "Python Data Visualization Practice"
 date: 2024-02-18
 category: [Data Analytics]
-tags: [Complete,Python,Pandas,Matplotlib,Seaborn]
+tags: [Complete,Python]
 description: "Practice using Python's data visualization libraries."
+image: /assets/images/2024-02-18-Python-Data-Visualization/price-histogram-improved.webp
 ---
 
 # Setup
