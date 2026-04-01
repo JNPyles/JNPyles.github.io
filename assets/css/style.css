@@ -205,3 +205,7 @@ pre {
 pre code.hljs {
   font-size: 0.85em;
 }
+
+img {
+  max-width: 42rem;
+}
