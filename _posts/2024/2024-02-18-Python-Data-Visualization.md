@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Python Data Visualization Practice"
+title: "Practice Data Visualization with Python"
 date: 2024-02-18
 category: [Data Analytics]
 tags: [Complete,Python]
@@ -8,7 +8,10 @@ description: "Practice using Python's data visualization libraries."
 excerpt: "In this project, I practice using Python to visualize data." 
 image: /assets/images/2024-02-18-Python-Data-Visualization/post-featured-image.webp
 ---
-![Automobile table head]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/post-featured-image.webp)
+![Title image - Practice Data Visualization with Python]({{ site.baseurl }}assets/images/2024-02-18-Python-Data-Visualization/post-featured-image.png)
+
+# Project Overview
+My goal for this project was to get hands-on practice visualizing data using Python.  
 
 # Setup
 To begin, I imported the Python libraries I will use for this project:
