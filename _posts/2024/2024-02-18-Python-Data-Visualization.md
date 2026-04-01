@@ -8,6 +8,7 @@ description: "Practice using Python's data visualization libraries."
 excerpt: "In this project, I practice using Python to visualize data." 
 image: /assets/images/2024-02-18-Python-Data-Visualization/post-featured-image.webp
 ---
+![Automobile table head]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/post-featured-image.webp)
 
 # Setup
 To begin, I imported the Python libraries I will use for this project:
