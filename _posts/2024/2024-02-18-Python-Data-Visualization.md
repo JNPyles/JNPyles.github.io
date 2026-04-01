@@ -1,14 +1,14 @@
 ---
 layout: project
-title: "Practice Data Visualization with Python"
+title: "Data Visualization with Python"
 date: 2024-02-18
 category: [Data Analytics]
 tags: [Complete,Python]
 description: "Practice using Python's data visualization libraries."
 excerpt: "In this project, I practice using Python to visualize data." 
-image: /assets/images/2024-02-18-Python-Data-Visualization/post-featured-image.webp
+image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 ---
-![Title image - Practice Data Visualization with Python]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/post-featured-image.webp)
+![Title image - Data Visualization with Python]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg)
 
 # Project Overview
 My goal for this project was to get hands-on practice visualizing data using Python.  
