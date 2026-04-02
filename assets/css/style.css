@@ -1,0 +1,14 @@
+/* Container for the icons */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-icons svg {
+    width: 32px;  
+    height: 32px;
+    fill: var(--text); /* Forces icons to use the light grey text color */
+    transition: transform 0.2s ease-in-out, fill 0.2s;
+}
+

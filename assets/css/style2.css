@@ -68,56 +68,6 @@ nav .nav-links a.active {
   text-underline-offset: 4px;
 }
 
-/* Container for the icons */
-.nav-icons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-/* Make the icons bigger and add a smooth transition */
-.nav-icons svg {
-    width: 32px;  
-    height: 32px;
-    fill: var(--text); /* Forces icons to use the light grey text color */
-    transition: transform 0.2s ease-in-out, fill 0.2s;
-}
-
-/* Hover effect: Scale up slightly */
-.nav-icons a:hover svg {
-    transform: scale(1.15);
-}
-
-/* The "Tooltip" - shows the name on hover */
-.nav-icons a {
-    position: relative;
-    display: inline-flex;
-    text-decoration: none;
-}
-
-.nav-icons a::after {
-    content: attr(aria-label); 
-    position: absolute;
-    bottom: -35px;            
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--tooltip-bg); 
-    color: var(--tooltip-text);          
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, bottom 0.2s ease;
-    z-index: 10;
-}
-
-/* Show the name when hovering */
-.nav-icons a:hover::after {
-    opacity: 1;
-    bottom: -40px; 
-}
 
 /* Clean up lists so they look like plain text logs */
 ul.post-list {
@@ -213,3 +163,40 @@ img {
   max-width: 42rem;
 }
 
+
+
+/* Hover effect: Scale up slightly */
+.nav-icons a:hover svg {
+    transform: scale(1.15);
+}
+
+/* The "Tooltip" - shows the name on hover */
+.nav-icons a {
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.nav-icons a::after {
+    content: attr(aria-label); 
+    position: absolute;
+    bottom: -35px;            
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--tooltip-bg); 
+    color: var(--tooltip-text);          
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, bottom 0.2s ease;
+    z-index: 10;
+}
+
+/* Show the name when hovering */
+.nav-icons a:hover::after {
+    opacity: 1;
+    bottom: -40px; 
+}

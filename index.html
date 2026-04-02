@@ -19,14 +19,6 @@ title: Home
 						
 						<span class="title-and-tags">
 								<a href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }} | {{ item.layout }}</a> 
-								
-								{% if item.tags.size > 0 %}
-										<span class="post-meta tags-inline">
-												{% for tag in item.tags %}
-														<a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
-												{% endfor %}
-										</span>
-								{% endif %}
 						</span>
 				</li>
   
