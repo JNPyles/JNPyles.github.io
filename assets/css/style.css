@@ -128,8 +128,11 @@ ul.post-list {
 ul.post-list li {
   margin-bottom: 0.8rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Changed from column to row */
+  align-items: baseline; /* Aligns the bottom of the text perfectly */
+  gap: 1rem; /* Adds a clean space between the date and the title */
 }
+
 
 /* The date next to posts */
 .post-meta {
