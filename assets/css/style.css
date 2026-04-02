@@ -176,6 +176,10 @@ ul.year-grouped li {
   font-size: 0.85rem;
 }
 
+.posts-list {
+ font-size: 0.85rem;
+}
+
 .tag-link {
   color: var(--meta);
   text-decoration: none;
