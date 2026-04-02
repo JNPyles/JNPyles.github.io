@@ -166,9 +166,9 @@ ul.year-grouped li {
 }
 
 /* Groups the title and tags together so they flow like a sentence */
-.title-and-tags {
+/* .title-and-tags {
   display: inline;
-}
+} */
 
 /* Spaces the tags slightly away from the end of the title */
 .tags-inline {
