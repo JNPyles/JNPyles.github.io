@@ -129,3 +129,169 @@ I used the boxplot() function to create a box plot for each body style.
 sns.boxplot(data=df, x='body_style', y='price')
 ```
 ![Boxplot Body Styles]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/boxplot-body-styles.webp)
+
+### Count Plot
+
+Next, I wanted to see the distribution of car makes. I used the `countplot()` function to count the number of occurrences for each manufacturer. 
+
+```python
+sns.countplot(data=df, x='make')
+```
+![Countplot Car Makes]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/countplot-car-makes.webp)
+
+Since the x-axis labels (the car makes) were overlapping and difficult to read, I adjusted the figure size and rotated the labels 90 degrees.
+
+```python
+plt.figure(figsize=(20,7))
+sns.countplot(data=df, x='make', hue='make')
+plt.xticks(rotation=90);
+```
+![Countplot Car Makes Improved]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/countplot-car-makes-improved.webp)
+
+### Line Plot
+
+To practice creating line plots, I briefly switched to some of Seaborn's built-in datasets. First, I loaded the "flights" dataset and plotted the number of passengers over time, using the `hue` parameter to color-code the lines by year. 
+
+```python
+flights = sns.load_dataset("flights")
+sns.lineplot(data = flights, x = 'month', y = 'passengers', ci=False, hue='year');
+```
+![Flights Lineplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/flights-lineplot.webp)
+
+Then, I loaded the "fmri" dataset. I used the `style` and `marker` parameters to further distinguish the lines representing different brain regions.
+
+```python
+frmi = sns.load_dataset("fmri")
+sns.lineplot(data = frmi, x="timepoint", y="signal", hue="region", style="region", ci=False, marker=True)
+```
+![FMRI Lineplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/fmri-lineplot.webp)
+
+# Exploring a New Dataset: Student Placement
+
+To expand the scope of my project, I decided to import a second dataset. Since I was working in Google Colab, I mounted my Google Drive to access a CSV containing student placement data.
+
+```python
+drive.mount('/content/drive')
+placement = pd.read_csv('/content/drive/MyDrive/Placement_Data.csv')
+```
+
+I started by getting a feel for the new data using the `head()` and `describe()` functions, just like I did with the automobile dataset. 
+
+```python
+placement.head()
+>>>
+```
+![Placement Table Head]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/placement-table-head.webp)
+
+
+```python
+placement.describe()
+>>>
+```
+![Placement Data Description]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/placement-data-description.webp)
+
+I also created a quick count plot to see the ratio of students who were successfully placed versus those who were not, and used `value_counts()` to see the exact numbers.
+
+```python
+sns.countplot(data=placement, x = 'status',)
+```
+![Placement Status Countplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/placement-status-countplot.webp)
+
+```python
+placement['status'].value_counts()
+>>>
+```
+![Placement Status Value Counts]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/placement-status-value-counts.webp)
+
+## Advanced Visualizations
+
+With the new dataset loaded, I experimented with slightly more complex visualizations to see how different academic metrics related to job placement.
+
+### Comparing Academic Percentages
+
+I used a histogram to map secondary education percentages (`ssc_p`) against higher secondary percentages (`hsc_p`), separated by placement status. 
+
+```python
+sns.histplot(data=placement, x='ssc_p', y='hsc_p', hue='status', kde=True)
+```
+![Academic Percentages Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/academic-percentages-histogram.webp)
+
+I also used a line plot to look at this same relationship from a different visual perspective. 
+
+```python
+sns.lineplot(data=placement, x='hsc_p',y='ssc_p', hue='status')
+```
+![Academic Percentages Lineplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/academic-percentages-lineplot.webp)
+
+### Heatmaps and Correlation
+
+I wanted to explore the direct correlation between secondary and higher secondary percentages. I calculated the correlation and visualized it using a heatmap, setting `annot=True` to display the exact numerical values inside the grid.
+
+```python
+sns.heatmap(data=placement[['ssc_p','hsc_p']].corr(), annot=True);
+```
+![Simple Correlation Heatmap]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/simple-correlation-heatmap.webp)
+
+Later, I generated a heatmap for the entire dataset's correlation matrix. I applied a custom color map (`cmap='YlGnBu'`) to make the stronger correlations visually pop.
+
+```python
+sns.heatmap(placement.corr(), annot = True, cmap='YlGnBu')
+```
+![Full Correlation Heatmap]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/full-correlation-heatmap.webp)
+
+### Subject Streams and Degrees
+
+I looked at the distribution of higher secondary subject streams (`hsc_s`) using a count plot.
+
+```python
+sns.countplot(x='hsc_s', data=placement, hue='hsc_s')
+```
+![Subject Stream Countplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/subject-stream-countplot.webp)
+
+Then, I used a box plot to see how degree percentages (`degree_p`) varied across those different subject streams.
+
+```python
+sns.boxplot(data=placement, y='hsc_s', x='degree_p', hue='hsc_s' )
+```
+![Degree Percentage by Stream Boxplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/degree-percentage-stream-boxplot.webp)
+
+To see how degree percentages directly affected placement status, I used a histogram with a kernel density estimate (`kde=True`).
+
+```python
+sns.histplot(data=placement, x='degree_p', hue='status', kde=True)
+```
+![Degree Percentage Status Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/degree-percentage-status-histogram.webp)
+
+### Joint Plots and Hexbins
+
+To see the relationship between employability test percentages (`etest_p`) and secondary percentages (`ssc_p`), I used a `jointplot()` with `kind='hex'`. A hexbin plot is incredibly useful for showing the density of overlapping data points.
+
+```python
+sns.jointplot(data=placement, x='etest_p', y='ssc_p', kind='hex')
+```
+![Employability vs Secondary Hexbin]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/employability-secondary-hexbin.webp)
+
+I also viewed the employability test distribution on its own, noting the maximum score in the dataset.
+
+```python
+sns.histplot(data=placement, x='etest_p', kde=True)
+placement['etest_p'].max()
+>>> 98.0
+```
+![Employability Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/employability-histogram.webp)
+
+### Linear Regression Plots
+
+Finally, I used `lmplot()` to create a scatter plot with a linear regression line. This effectively mapped out the overarching trend between secondary and higher secondary scores, distinctly separated by placement status.
+
+```python
+sns.lmplot(x='ssc_p', y='hsc_p', hue='status', data= placement)
+```
+![Linear Regression Placement]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/linear-regression-placement.webp)
+
+As a final check, I created a box plot to isolate secondary percentages and see their spread against the final placement status.
+
+```python
+sns.boxplot(x='ssc_p', y='status', data=placement)
+```
+![Secondary Percentage Status Boxplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/secondary-percentage-status-boxplot.webp)
