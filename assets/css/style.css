@@ -10,6 +10,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 18px;
   font-size: 24px;
   line-height: 1.6;
   color: var(--text);
@@ -128,11 +129,8 @@ ul.post-list {
 ul.post-list li {
   margin-bottom: 0.8rem;
   display: flex;
-  flex-direction: row; /* Changed from column to row */
-  align-items: baseline; /* Aligns the bottom of the text perfectly */
-  gap: 1rem; /* Adds a clean space between the date and the title */
+  flex-direction: column;
 }
-
 
 /* The date next to posts */
 .post-meta {
@@ -166,18 +164,14 @@ ul.year-grouped li {
 }
 
 /* Groups the title and tags together so they flow like a sentence */
-/* .title-and-tags {
+.title-and-tags {
   display: inline;
-} */
+}
 
 /* Spaces the tags slightly away from the end of the title */
 .tags-inline {
   margin-left: 0.5rem; 
   font-size: 0.85rem;
-}
-
-.posts-list {
- font-size: 0.85rem;
 }
 
 .tag-link {
