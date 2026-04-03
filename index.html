@@ -2,6 +2,7 @@
 layout: default
 title: Home
 ---
+
 {% assign current_year = "" %}
 
 {% for item in site.posts %}
@@ -13,13 +14,11 @@ title: Home
     <ul class="post-list year-grouped">
     {% assign current_year = item_year %}
   {% endif %}
-  
 		<li>
-				<span class="title-and-tags">
-						<span class="post-meta date-short">{{ item.date | date: "%d %b" }}</span>
-						<a class="post-list" href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }}</a> 
-				</span>
-				</li>
-  
+			<span class="title-and-tags">
+				<span class="post-meta date-short">{{ item.date | date: "%d %b" }}</span>
+				<a class="post-list" href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }}</a> 
+			</span>
+		</li>
   {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
