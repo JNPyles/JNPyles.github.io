@@ -132,6 +132,7 @@ ul.post-list {
 
 ul.post-list li {
   margin-bottom: 0.8rem;
+  margin-left:2.5rem;
   display: flex;
   flex-direction: column;
   font-size: 0.9rem;
