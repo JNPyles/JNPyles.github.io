@@ -8,18 +8,13 @@ description: "Building a neural network-based classifier that can determine whet
 excerpt: "Building a neural network-based classifier that can determine whether a customer will leave the bank or not in the next 6 months." 
 image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 ---
-
-# Bank Churn Prediction
-
-## Problem Statement
-
-### Context
+## Context
 Businesses like banks which provide services have to worry about the problem of 'Customer Churn' i.e., customers leaving and joining another service provider. It is important to understand which aspects of the service influence a customer's decision in this regard. Management can concentrate efforts on the improvement of service, keeping in mind these priorities.
 
-### Objective
+## Objective
 As a Data Scientist with the bank, the goal is to build a neural network-based classifier that can determine whether a customer will leave the bank or not in the next 6 months.
 
-### Data Dictionary
+## Data Dictionary
 * **CustomerId:** Unique ID which is assigned to each customer
 * **Surname:** Last name of the customer
 * **CreditScore:** It defines the credit history of the customer

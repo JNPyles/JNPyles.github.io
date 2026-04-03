@@ -9,10 +9,10 @@ excerpt: "In this project, I practice using Python to visualize data."
 image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 og_image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 ---
-# Project Overview
+## Project Overview
 My goal for this project was to get hands-on practice visualizing data using Python.  
 
-# Setup
+## Setup
 To begin, I imported the Python libraries I will use for this project:
 - Pandas for managing the data.
 - Matplotlib and Seaborn for visualizations. 
@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
-# Understanding the Data
+## Understanding the Data
 The data is a CSV file contaniing information on various automobiles (make, engine type, mpg, etc.). I imported the data into a pandas dataframe. 
 ```
 df = pd.read_csv('/Automobile.csv')
@@ -167,7 +167,7 @@ sns.lineplot(data = frmi, x="timepoint", y="signal", hue="region", style="region
 ```
 ![FMRI Lineplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/fmri-lineplot.webp)
 
-# Exploring a New Dataset: Student Placement
+## Exploring a New Dataset: Student Placement
 
 To expand the scope of my project, I decided to import a second dataset. Since I was working in Google Colab, I mounted my Google Drive to access a CSV containing student placement data.
 
