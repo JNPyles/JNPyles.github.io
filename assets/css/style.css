@@ -134,6 +134,7 @@ ul.post-list li {
   margin-bottom: 0.8rem;
   display: flex;
   flex-direction: column;
+  font-size: 0.9rem;
 }
 
 .post-meta {
