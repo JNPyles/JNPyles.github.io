@@ -25,7 +25,7 @@ permalink: /tags/
     {% for post in tag[1] %}
       <li>
        <span class="title-and-tags">
-        <a href="{{ post.external_url | default: post.link | default: post.url }}">{{ post.title }}</a> | {{ post.layout }}
+        <a href="{{ post.external_url | default: post.link | default: post.url }}">{{ post.title }}</a>
         </span>
       </li>
     {% endfor %}

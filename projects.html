@@ -11,7 +11,7 @@ permalink: /projects/
   
   {% assign has_projects = false %}
   {% for post in cat_posts %}
-    {% if post.layout == 'project' %}
+    {% if post.layout == 'post' %}
       {% assign has_projects = true %}
     {% endif %}
   {% endfor %}
