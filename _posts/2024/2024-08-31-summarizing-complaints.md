@@ -1,5 +1,4 @@
 ---
-layout: post
 type: post
 title: "Using AI to Summarize 1,100 Complaints in 30 Minutes"
 date: 2024-08-31

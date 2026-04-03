@@ -1,5 +1,4 @@
 ---
-layout: post
 type: project
 title: "Bank Churn Prediction Using a Neural Network Classifier"
 date: 2024-06-04

@@ -1,5 +1,4 @@
 ---
-layout: post
 type: project
 title: "8-Bit Breadboard Computer"
 date: 2025-05-21

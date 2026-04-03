@@ -1,5 +1,4 @@
 ---
-layout: post
 type: project
 title: "Using Python to Explore CFPB Complaint Data"
 date: 2024-08-07

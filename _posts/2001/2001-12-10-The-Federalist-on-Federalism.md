@@ -1,5 +1,4 @@
 ---
-layout: post
 type: project
 title: "The Federalist on Federalism"
 date: 2001-12-10

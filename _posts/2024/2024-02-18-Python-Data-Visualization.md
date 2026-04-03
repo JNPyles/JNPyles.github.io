@@ -1,5 +1,4 @@
 ---
-layout: post
 type: project
 title: "Data Visualization with Python"
 date: 2024-02-18

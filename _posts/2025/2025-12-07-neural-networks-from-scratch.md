@@ -1,5 +1,4 @@
 ---
-layout: post
 type: project
 title: "Neural Networks from Scratch"
 date: 2025-12-07
