@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "The Federalist on Federalism"
-date: 2021-12-10
+date: 2001-12-10
 category: [Research]
 tags: [Complete,Political Philosophy]
 description: "In this graduate paper, I analyze federalism as understood by the authors of The Federalist Papers."

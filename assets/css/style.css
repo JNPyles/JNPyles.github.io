@@ -1,7 +1,7 @@
 /* Minimalist Base Variables (Permanent Dark Mode) */
 :root {
-  --bg: #121212;
-  --text: #e0e0e0;
+  --bg: #18181b;
+  --text: #d1d5db;
   --link: #66b3ff;
   --meta: #888888;
   --tooltip-bg: #f9f9f9; 
@@ -20,6 +20,8 @@ body {
   max-width: 42rem; /* ~750px width, perfect for reading */
   margin: 0 auto;
   padding: 2rem 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
@@ -29,10 +31,23 @@ h1, h2, h3 {
   margin-bottom: 0.5em;
 }
 
+h1, h2 {
+  letter-spacing: -0.02em; /* Pulls the large letters slightly tighter together for a modern look */
+}
+
+h3 {
+  letter-spacing: 0.01em; /* Gives smaller headers a tiny bit of breathing room */
+}
+
 /* Improved Typographic Scale */
 h1 { font-size: 2.4rem; } /* Distinctly larger than other headers */
 h2 { font-size: 1.7rem; }
 h3 { font-size: 1.25rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
 
 a {
   color: var(--link);
@@ -135,12 +150,12 @@ ul.post-list li {
   margin-left:2.5rem;
   display: flex;
   flex-direction: column;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .post-meta {
   color: var(--meta);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: monospace;
 }
 
