@@ -1,5 +1,6 @@
 ---
 layout: post
+type: post
 title: "Explorer Transportation Data Science Project"
 date: 2025-01-25
 tags: [Python, Pandas, Matplotlib]

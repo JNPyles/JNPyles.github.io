@@ -1,5 +1,6 @@
 ---
 layout: post
+type: post
 title: "Using AI to Summarize 1,100 Complaints in 30 Minutes"
 date: 2024-08-31
 linkedin_url: "https://www.linkedin.com/pulse/using-ai-summarize-1100-complaints-30-minutes-jonathon-pyles-adlgc/"

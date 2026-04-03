@@ -21,7 +21,7 @@ permalink: /projects/
     
     <ul class="post-list year-grouped">
       {% for post in cat_posts %}
-        {% if post.layout == 'project' %}
+        {% if post.type == 'project' %}
           <li>
             <span class="title-and-tags">
               <a href="{{ post.link | default: post.url }}">{{ post.title }}</a> 
