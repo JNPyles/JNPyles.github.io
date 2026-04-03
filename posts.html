@@ -7,37 +7,28 @@ permalink: /posts/
 
 {% for category in sorted_categories %}
   {% assign cat_name = category[0] %}
-  {% assign cat_posts = category[1] %}
-  
-  {% assign has_articles = false %}
-  {% for post in cat_posts %}
-    {% if post.layout == 'post' %}
-      {% assign has_articles = true %}
-    {% endif %}
-  {% endfor %}
-  
-  {% if has_articles %}
+  {% comment %} Filter the category's posts to only include those where type is 'post' {% endcomment %}
+  {% assign filtered_posts = category[1] | where: "type", "post" %}
+
+  {% if filtered_posts.size > 0 %}
     <h3 class="year-heading" id="{{ cat_name | slugify }}">{{ cat_name }}</h3>
     
     <ul class="post-list year-grouped">
-      {% for post in cat_posts %}
-        {% if post.type == 'post' %}
-          <li>
-            <span class="title-and-tags">
-              <a href="{{ post.link | default: post.url }}">{{ post.title }}</a> 
-              
-              {% if post.tags.size > 0 %}
-                <span class="post-meta tags-inline">
-                  {% for tag in post.tags %}
-                    <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
-                  {% endfor %}
-                </span>
-              {% endif %}
-            </span>
-          </li>
-        {% endif %}
+      {% for post in filtered_posts %}
+        <li>
+          <span class="title-and-tags">
+            <a href="{{ post.link | default: post.url }}">{{ post.title }}</a> 
+            
+            {% if post.tags.size > 0 %}
+              <span class="post-meta tags-inline">
+                {% for tag in post.tags %}
+                  <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
+                {% endfor %}
+              </span>
+            {% endif %}
+          </span>
+        </li>
       {% endfor %}
     </ul>
   {% endif %}
-  
 {% endfor %}
