@@ -36,7 +36,7 @@ h3 { font-size: 1.25rem; }
 
 a {
   color: var(--link);
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition: text-decoration-thickness 0.2s ease;
