@@ -17,8 +17,7 @@ permalink: /projects/
       {% for project in filtered_projects %}
         <li>
           <span class="title-and-tags">
-            <a href="{{ project.link | default: project.url }}">{{ project.title }}</a> 
-            {% endif %}
+            <a href="{{ project.link | default: project.url }}">{{ project.title }}</a>
           </span>
         </li>
       {% endfor %}
