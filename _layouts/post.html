@@ -7,7 +7,7 @@ layout: default
     <div style="font-family: monospace; color: var(--meta); font-size: 0.9rem; margin-bottom: 1.5rem;">
         {{ page.date | date: "%B %-d, %Y" }} | 
               <span class="post-meta tags-inline">
-                {% for tag in post.tags %}
+                {% for tag in page.tags %}
                   <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
                 {% endfor %}
               </span>

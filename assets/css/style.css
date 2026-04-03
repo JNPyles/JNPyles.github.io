@@ -167,6 +167,7 @@ ul.year-grouped li {
   display: flex;
   align-items: baseline;
   margin-bottom: 0.6rem;
+  gap: 1rem;
 }
 
 .date-short {

@@ -18,13 +18,6 @@ permalink: /projects/
         <li>
           <span class="title-and-tags">
             <a href="{{ project.link | default: project.url }}">{{ project.title }}</a> 
-            
-            {% if project.tags.size > 0 %}
-              <span class="post-meta tags-inline">
-                {% for tag in project.tags %}
-                  <a href="/tags/#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
-                {% endfor %}
-              </span>
             {% endif %}
           </span>
         </li>
