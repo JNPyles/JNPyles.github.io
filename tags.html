@@ -24,12 +24,7 @@ permalink: /tags/
   <ul class="post-list">
     {% for post in tag[1] %}
       <li>
-        
-        {% if post.layout == 'project' %}
-            <span class="post-meta date-short" style="color: var(--link);">Project</span>
-        {% else %}
-            <span class="post-meta date-short">Article</span>
-        {% endif %}
+        {{ post.layout }} | 
         
         <a href="{{ post.external_url | default: post.link | default: post.url }}">{{ post.title }}</a>
         
