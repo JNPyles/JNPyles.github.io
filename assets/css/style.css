@@ -8,19 +8,20 @@
   --tooltip-text: #333333;
 }
 
+/* =========================================
+   Base Layout & Typography
+   ========================================= */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-size: 24px;
+  font-size: 18px; /* Removed the 24px duplicate override */
   line-height: 1.6;
   color: var(--text);
   background-color: var(--bg);
-  max-width: 42rem; /* Keeps the line length perfect for reading */
+  max-width: 42rem; /* ~750px width, perfect for reading */
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-/* Typography */
 h1, h2, h3 {
   font-weight: 600;
   line-height: 1.2;
@@ -28,26 +29,30 @@ h1, h2, h3 {
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.4rem; }
+/* Improved Typographic Scale */
+h1 { font-size: 2.4rem; } /* Distinctly larger than other headers */
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.25rem; }
 
-/* Links - Classic underline style */
 a {
   color: var(--link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  transition: text-decoration-thickness 0.2s ease;
 }
 
 a:hover {
   text-decoration-thickness: 2px;
 }
 
-/* Navigation Container */
+/* =========================================
+   Navigation
+   ========================================= */
 nav.site-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Pushes links left and icons right */
+  justify-content: space-between;
   margin-bottom: 4rem;
   font-size: 1.1rem;
 }
@@ -69,58 +74,57 @@ nav .nav-links a.active {
   text-underline-offset: 4px;
 }
 
-/* Container for the icons */
+/* Icon Container & Sizing */
 .nav-icons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-/* Make the icons bigger and add a smooth transition */
 .nav-icons svg {
-    width: 32px;  
-    height: 32px;
-    fill: var(--text); /* Forces icons to use the light grey text color */
-    transition: transform 0.2s ease-in-out, fill 0.2s;
+  width: 32px;  
+  height: 32px;
+  fill: var(--text);
+  transition: transform 0.2s ease-in-out, fill 0.2s;
 }
 
-/* Hover effect: Scale up slightly */
 .nav-icons a:hover svg {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
-/* The "Tooltip" - shows the name on hover */
+/* Tooltip */
 .nav-icons a {
-    position: relative;
-    display: inline-flex;
-    text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  text-decoration: none;
 }
 
 .nav-icons a::after {
-    content: attr(aria-label); 
-    position: absolute;
-    bottom: -35px;            
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--tooltip-bg); 
-    color: var(--tooltip-text);          
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, bottom 0.2s ease;
-    z-index: 10;
+  content: attr(aria-label); 
+  position: absolute;
+  bottom: -35px;            
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--tooltip-bg); 
+  color: var(--tooltip-text);          
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, bottom 0.2s ease;
+  z-index: 10;
 }
 
-/* Show the name when hovering */
 .nav-icons a:hover::after {
-    opacity: 1;
-    bottom: -40px; 
+  opacity: 1;
+  bottom: -40px; 
 }
 
-/* Clean up lists so they look like plain text logs */
+/* =========================================
+   Post Lists & Meta Info
+   ========================================= */
 ul.post-list {
   list-style-type: none;
   padding: 0;
@@ -132,30 +136,23 @@ ul.post-list li {
   flex-direction: column;
 }
 
-/* The date next to posts */
 .post-meta {
   color: var(--meta);
   font-size: 0.9rem;
-  font-family: monospace; /* Gives it a slight "terminal" feel */
+  font-family: monospace;
 }
 
-/* Styling for the Year Headers */
 h3.year-heading {
-  font-size: 1.2rem;
-  color: var(--text);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  font-weight: 600;
 }
 
-/* Flexbox layout to align the date and the content block */
 ul.year-grouped li {
   display: flex;
   align-items: baseline;
   margin-bottom: 0.6rem;
 }
 
-/* Fix the width of the date so titles align perfectly vertically */
 .date-short {
   min-width: 65px;
   flex-shrink: 0;
@@ -163,12 +160,10 @@ ul.year-grouped li {
   color: var(--meta);
 }
 
-/* Groups the title and tags together so they flow like a sentence */
 .title-and-tags {
   display: inline;
 }
 
-/* Spaces the tags slightly away from the end of the title */
 .tags-inline {
   margin-left: 0.5rem; 
   font-size: 0.85rem;
@@ -184,7 +179,9 @@ ul.year-grouped li {
   text-decoration: underline;
 }
 
-/* Container styling */
+/* =========================================
+   Code Blocks & Media
+   ========================================= */
 figure.highlight, 
 pre {
   background: #2d2d2d;
@@ -196,11 +193,11 @@ pre {
   font-family: "Courier New", Courier, monospace;
 }
 
-/* Basic Syntax Colors (Generic Rouge Classes) */
-.highlight .comment { color: #999; font-style: italic; }
-.highlight .keyword { color: #cc99cd; font-weight: bold; }
-.highlight .string  { color: #7ec699; }
-.highlight .number  { color: #f08d49; }
+/* Generic Rouge Syntax Colors */
+.highlight .comment  { color: #999; font-style: italic; }
+.highlight .keyword  { color: #cc99cd; font-weight: bold; }
+.highlight .string   { color: #7ec699; }
+.highlight .number   { color: #f08d49; }
 .highlight .function { color: #f8c555; }
 
 pre code.hljs {
@@ -208,5 +205,7 @@ pre code.hljs {
 }
 
 img {
-  max-width: 42rem;
+  max-width: 100%; /* Ensures responsiveness */
+  height: auto;
+  display: block; /* Prevents awkward inline spacing beneath images */
 }
