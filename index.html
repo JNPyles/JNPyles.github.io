@@ -36,6 +36,14 @@ title: Home
 						</li>
 						{% if forloop.last %}</ul>{% endif %}
 				{% endfor %}  
+
+				<ul>
+						{% for content in site.ai_generated %}
+								<li>
+										<a href="{{ content.url }}">{{ content.title }}</a> - {{ content.client }}
+								</li>
+						{% endfor %}
+				</ul>
 		</main>
 
 </div>

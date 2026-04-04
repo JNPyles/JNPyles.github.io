@@ -12,7 +12,6 @@ author:
 plugins:
   - jekyll-seo-tag
 
-
 markdown: kramdown
 kramdown:
   input: GFM
@@ -27,10 +26,14 @@ highlighter: rouge
 minima:
   skin: dark  # or "dark", "solarized", "solarized-dark"
 
-
 defaults:
   - scope:
       path: "" # An empty string here means "all files"
       type: "posts"
     values:
       layout: "post"
+
+collections:
+  ai_generated:
+    output: true
+    permalink: /ai_generated/:path/
