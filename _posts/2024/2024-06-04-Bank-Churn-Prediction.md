@@ -1,7 +1,7 @@
 ---
 title: "Bank Churn Prediction Using a Neural Network Classifier"
 date: 2024-06-04
-tags: [Project, Machine Learning]
+tags: [Projects, Data Science]
 image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 ---
 ## Context

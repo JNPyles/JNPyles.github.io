@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization with Python"
 date: 2024-02-18
-tags: [Data Analytics, Python, Project]
+tags: [Data Science, Projects]
 image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 ---
 ## Project Overview

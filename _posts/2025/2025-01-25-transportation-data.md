@@ -1,7 +1,7 @@
 ---
 title: "Explorer Transportation Data Science Project"
 date: 2025-01-25
-tags: [Data Analytics, Python, Project]
+tags: [Data Science, Projects]
 link: "https://colab.research.google.com/drive/1K61KI9zeGfhZ_HbNdXzvRR2zjS-Zfqho"
 ---
 

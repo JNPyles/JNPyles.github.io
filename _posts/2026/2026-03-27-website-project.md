@@ -1,7 +1,7 @@
 ---
 title: "Personal Website"
 date: 2026-03-27
-tags: [Project]
+tags: [Projects, Technology]
 github_url: "https://github.com/JNPyles/JNPyles.github.io"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Using Python to Explore CFPB Complaint Data"
 date: 2024-08-07
-tags: [Project, Data Analytics, Python]
+tags: [Projects, Data Science]
 image: "/assets/images/cfpb-project-preview.png" 
 ---
 
