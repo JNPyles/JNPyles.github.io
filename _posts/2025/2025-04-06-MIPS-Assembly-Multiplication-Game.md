@@ -4,6 +4,7 @@ date: 2024-06-04
 tags: [Projects, Technology]
 gallery_folder: "assets/images/2025-04-06-MIPS-Assembly-Multiplication-Game"
 ---
+{% include gallery.html %}
 
 This project is a functional, turn-based "Multiplication Game" developed in **MIPS Assembly**. It challenges the player to use multiplication facts to beat a computer opponent by being the first to connect four markers on a grid.
 

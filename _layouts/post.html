@@ -24,7 +24,7 @@ layout: default
             <a href="{{ page.linkedin_url }}" target="_blank">View on LinkedIn ↗</a>
         {% endif %}
         {% if page.huggingface_url %}
-            <a href="{{ page.linkedin_url }}" target="_blank">View on Huggingface ↗</a>
+            <a href="{{ page.huggingface_url }}" target="_blank">View on Huggingface ↗</a>
         {% endif %}
         {% if page.dropbox_url %}
             <a href="{{ page.dropbox_url }}" target="_blank">View on Dropbox ↗</a>
@@ -33,18 +33,5 @@ layout: default
 </header>
 
 <article>
-    <div class="gallery-grid">
-      {% assign images = site.static_files | where_exp: "item", "item.path contains page.gallery_folder" %}
-      {% for image in images %}
-        {% if image.extname == ".jpg" or image.extname == ".jpeg" or image.extname == ".png" or image.extname == ".webp" %}
-          <div class="gallery-item">
-            <a href="{{ image.path | relative_url }}">
-              <img src="{{ image.path | relative_url }}" alt="Gallery image" loading="lazy">
-            </a>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
     {{ content }}
 </article>
-
