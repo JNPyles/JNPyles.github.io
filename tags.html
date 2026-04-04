@@ -17,9 +17,9 @@ permalink: /tags/
 </div>
 
 {% for tag in sorted_tags %}
-  <h2 id="{{ tag[0] | slugify }}" style="padding-top: 2rem; border-top: 1px solid var(--border);">
+  <h3 id="{{ tag[0] | slugify }}" style="padding-top: 2rem; border-top: 1px solid var(--border);">
     #{{ tag[0] }}
-  </h2>
+  </h3>
   
   <ul class="post-list">
     {% for post in tag[1] %}
