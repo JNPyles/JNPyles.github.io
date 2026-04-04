@@ -86,12 +86,3 @@ AI underwriting is an operational necessity, but it cannot be deployed through l
 * **Dastin, J. (2018).** Amazon scraps secret AI recruiting tool. *Reuters*.
 * **Executive Order 14179. (2025).** Removing barriers to American leadership in AI. *90 Fed. Reg. 2172*.
 * **Tabassi, E. (2023).** NIST AI Risk Management Framework (AI RMF 1.0).
-
----
-
-## Appendix A: Revise and Resubmit Memo
-I incorporated feedback from reviewers by narrowing the focus from general AI integration to a specific use case: **small business credit decisioning**. This allowed for a more technical analysis of "black box" risks and compliance with the Colorado AI Act. I also reduced the total word count by 200 words to ensure the brief remained succinct and impactful.
-
-## Appendix B: Writing Process Memo
-**Research Phase:** Utilized Purdue University Libraries and Google Scholar for Tier 1 sources. **Google Gemini** was used to track industry publications and current regulatory news (e.g., Colorado SB 24-205).  
-**Editing Phase:** AI was used as a brainstorming partner to critique logic gaps and ensure the final draft met the requirements of the assignment rubric.
