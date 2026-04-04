@@ -277,3 +277,26 @@ img {
     gap: 15px;
   }
 }
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 10px;
+}
+
+.gallery-item {
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .gallery-grid { column-count: 2; }
+}
+@media (max-width: 500px) {
+  .gallery-grid { column-count: 1; }
+}

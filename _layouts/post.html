@@ -33,10 +33,16 @@ layout: default
 </header>
 
 <article>
-    <div class="gallery">
+    <div class="gallery-grid">
       {% assign images = site.static_files | where_exp: "item", "item.path contains page.gallery_folder" %}
       {% for image in images %}
-        <img src="{{ image.path | relative_url }}" alt="Gallery Image" class="gallery-thumb">
+        {% if image.extname == ".jpg" or image.extname == ".jpeg" or image.extname == ".png" or image.extname == ".webp" %}
+          <div class="gallery-item">
+            <a href="{{ image.path | relative_url }}">
+              <img src="{{ image.path | relative_url }}" alt="Gallery image" loading="lazy">
+            </a>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
     {{ content }}
