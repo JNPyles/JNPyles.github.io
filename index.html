@@ -6,28 +6,38 @@ title: Home
 {% assign current_year = "" %}
 {% assign sorted_tags = site.tags | sort %}
 
-<div style="margin-bottom: 3rem; line-height: 2;">
-  {% for tag in sorted_tags %}
-    <a href="/tags/#{{ tag[0] | slugify }}" style="margin-right: 15px; border-bottom: none;" class="tag-link">
-      {{ tag[0] }} <small>({{ tag[1].size }})</small>
-    </a>
-  {% endfor %}
+<div class="portfolio-container">
+  
+  <aside class="tag-sidebar">
+    <nav class="tag-list">
+      {% for tag in sorted_tags %}
+        <a href="/tags/#{{ tag[0] | slugify }}" class="tag-link">
+          {{ tag[0] }} <small>({{ tag[1].size }})</small>
+        </a>
+      {% endfor %}
+    </nav>
+  </aside>
+
+  <main class="project-content">
+				{% for item in site.posts %}
+						{% capture item_year %}{{ item.date | date: "%Y" }}{% endcapture %}
+						
+						{% if item_year != current_year %}
+								{% unless forloop.first %}</ul>{% endunless %}
+								<h3 class="year-heading">{{ item_year }}</h3>
+								<ul class="post-list year-grouped">
+								{% assign current_year = item_year %}
+						{% endif %}
+						<li>
+							<span class="title-and-tags">
+								<span class="post-meta date-short">{{ item.date | date: "%d %b" }}</span>
+								<a class="post-list" href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }}</a> 
+							</span>
+						</li>
+						{% if forloop.last %}</ul>{% endif %}
+				{% endfor %}  
+		</main>
+
 </div>
 
-{% for item in site.posts %}
-  {% capture item_year %}{{ item.date | date: "%Y" }}{% endcapture %}
-  
-  {% if item_year != current_year %}
-    {% unless forloop.first %}</ul>{% endunless %}
-    <h3 class="year-heading">{{ item_year }}</h3>
-    <ul class="post-list year-grouped">
-    {% assign current_year = item_year %}
-  {% endif %}
-		<li>
-			<span class="title-and-tags">
-				<span class="post-meta date-short">{{ item.date | date: "%d %b" }}</span>
-				<a class="post-list" href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }}</a> 
-			</span>
-		</li>
-  {% if forloop.last %}</ul>{% endif %}
-{% endfor %}
+

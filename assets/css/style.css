@@ -227,3 +227,53 @@ img {
   height: auto;
   display: block; /* Prevents awkward inline spacing beneath images */
 }
+
+
+/* The wrapper that creates the two columns */
+.portfolio-container {
+  display: flex;
+  gap: 50px; /* Space between tags and projects */
+  align-items: flex-start;
+}
+
+/* Sidebar styling */
+.tag-sidebar {
+  flex: 0 0 180px; /* Sidebar stays at 180px width */
+  position: sticky;
+  top: 2rem; /* Keeps it on screen as you scroll down the years */
+}
+
+/* Stack tags vertically */
+.tag-list {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.2;
+}
+
+.tag-link {
+  border-bottom: none;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.tag-link small {
+  opacity: 0.6;
+  margin-left: 4px;
+}
+
+/* Mobile View: Stack them back to normal on small screens */
+@media (max-width: 800px) {
+  .portfolio-container {
+    flex-direction: column;
+  }
+  .tag-sidebar {
+    position: static;
+    flex: none;
+    margin-bottom: 2rem;
+  }
+  .tag-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
