@@ -11,13 +11,19 @@
 /* =========================================
    Base Layout & Typography
    ========================================= */
+html {
+  /* This scales the baseline from 16px to 20px. 
+     Every 'rem' value below is automatically 25% larger! */
+  font-size: 125%; 
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 18px; 
+  font-size: 1.125rem; /* Equivalent to 22.5px (was 18px) */
   line-height: 1.6;
   color: var(--text);
   background-color: var(--bg);
-  max-width: 54rem; /* Wide enough for sidebar + content */
+  max-width: 54rem; /* Automatically scaled up to 1080px (was 864px) */
   margin: 0 auto;
   padding: 2rem 1rem;
   -webkit-font-smoothing: antialiased;
@@ -51,11 +57,11 @@ p {
 
 a {
   color: var(--link);
-  text-decoration: none; /* Global underline removal */
+  text-decoration: none; 
 }
 
 a:hover {
-  text-decoration: underline; /* Re-applies underline on hover */
+  text-decoration: underline; 
   text-decoration-thickness: 2px;
 }
 
@@ -72,7 +78,6 @@ nav.site-nav {
 
 nav .nav-links a {
   margin-right: 1.2rem;
-  /* text-decoration inherits 'none' from base <a> */
 }
 
 nav .nav-links a:hover {
@@ -90,13 +95,13 @@ nav .nav-links a.active {
 /* Icon Container & Sizing */
 .nav-icons {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   align-items: center;
 }
 
 .nav-icons svg {
-  width: 32px;  
-  height: 32px;
+  width: 2rem;  /* Scaled to 40px (was 32px) */
+  height: 2rem;
   fill: var(--text);
   transition: transform 0.2s ease-in-out, fill 0.2s;
 }
@@ -114,14 +119,14 @@ nav .nav-links a.active {
 .nav-icons a::after {
   content: attr(aria-label); 
   position: absolute;
-  bottom: -35px;            
+  bottom: -2.2rem;            
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--tooltip-bg); 
   color: var(--tooltip-text);          
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -131,7 +136,7 @@ nav .nav-links a.active {
 
 .nav-icons a:hover::after {
   opacity: 1;
-  bottom: -40px; 
+  bottom: -2.5rem; 
 }
 
 
@@ -142,32 +147,31 @@ nav .nav-links a.active {
 /* The wrapper that creates the two columns */
 .portfolio-container {
   display: flex;
-  flex-direction: row-reverse; /* Puts tags on the right, content on the left */
-  gap: 60px; /* Space between tags and projects */
+  flex-direction: row-reverse; 
+  gap: 3.75rem; /* Scaled to 75px (was 60px) */
   align-items: flex-start;
 }
 
 /* Main Content Area */
 .project-content {
-  flex: 1; /* Takes up all remaining space on the left */
-  min-width: 0; /* Prevents text from breaking out of the container */
+  flex: 1; 
+  min-width: 0; 
 }
 
-/* Removes top margin from the very first heading, piercing through any template wrappers */
+/* Removes top margin from the very first heading */
 .project-content .year-heading:first-of-type {
-  margin-top: 0 !important; /* Added !important just in case another Jekyll base class is fighting it */
+  margin-top: 0 !important; 
 }
 
-/* Also strip the top margin of any hidden wrappers just in case */
 .project-content > *:first-child {
   margin-top: 0;
 }
 
 /* Sidebar styling */
 .tag-sidebar {
-  flex: 0 0 200px; /* Sidebar stays at 200px width */
+  flex: 0 0 12.5rem; /* Scaled to 250px (was 200px) */
   position: sticky;
-  top: 2rem; /* Keeps it on screen as you scroll down */
+  top: 2rem; 
 }
 
 /* Stack tags vertically */
@@ -179,7 +183,7 @@ nav .nav-links a.active {
 }
 
 .tag-list a {
-  color: var(--text); /* Matches normal text instead of hyperlink blue */
+  color: var(--text); 
   font-size: 0.95rem;
   border-bottom: none;
 }
@@ -191,14 +195,15 @@ nav .nav-links a.active {
 
 .tag-list small {
   opacity: 0.6;
-  margin-left: 4px;
+  margin-left: 0.25rem;
 }
 
-/* Mobile View: Stack them back to normal on small screens */
-@media (max-width: 900px) {
+/* Mobile View: I increased the breakpoint by 25% (900 -> 1125px) 
+   so the layout collapses earlier to accommodate the larger elements */
+@media (max-width: 1125px) {
   .portfolio-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 2rem;
   }
   .tag-sidebar {
     position: static;
@@ -209,7 +214,7 @@ nav .nav-links a.active {
   .tag-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 1rem;
   }
 }
 
@@ -249,7 +254,7 @@ ul.year-grouped li {
 }
 
 .date-short {
-  min-width: 65px;
+  min-width: 4rem; /* Scaled to 80px (was 65px) */
   flex-shrink: 0;
   font-family: monospace;
   color: var(--meta);
@@ -264,7 +269,6 @@ ul.year-grouped li {
   font-size: 0.85rem;
 }
 
-/* For tags listed inline next to project titles */
 .tag-link {
   color: var(--meta);
   text-decoration: none;
@@ -282,14 +286,13 @@ figure.highlight,
 pre {
   background: #2d2d2d;
   color: #f8f8f2;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 0.3rem;
   overflow-x: auto;
   line-height: 1.5;
   font-family: "Courier New", Courier, monospace;
 }
 
-/* Generic Rouge Syntax Colors */
 .highlight .comment  { color: #999; font-style: italic; }
 .highlight .keyword  { color: #cc99cd; font-weight: bold; }
 .highlight .string   { color: #7ec699; }
@@ -300,11 +303,10 @@ pre code.hljs {
   font-size: 0.85em;
 }
 
-/* Global Image Rules */
 img {
   max-width: 100%; 
   height: auto;
-  display: block; /* Prevents text-baseline gap under all images */
+  display: block; 
 }
 
 /* =========================================
@@ -312,23 +314,23 @@ img {
    ========================================= */
 .gallery-grid {
   column-count: 3;
-  column-gap: 10px;
+  column-gap: 0.6rem;
 }
 
 .gallery-item {
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
   break-inside: avoid;
 }
 
 .gallery-item img {
   width: 100%;
-  border-radius: 8px;
-  /* display: block; removed as it inherits from the global img rule */
+  border-radius: 0.5rem;
 }
 
-@media (max-width: 800px) {
+/* Media queries scaled up roughly 25% to account for larger components */
+@media (max-width: 1000px) {
   .gallery-grid { column-count: 2; }
 }
-@media (max-width: 500px) {
+@media (max-width: 625px) {
   .gallery-grid { column-count: 1; }
 }
