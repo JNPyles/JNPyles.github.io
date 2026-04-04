@@ -1,9 +1,9 @@
 ---
 type: project
-title: "8-Bit Breadboard Computer"
+title: "8-Bit Breadboard Computer [In Progress]"
 date: 2025-05-21
 category: [Educational]
-tags: [In Progress,Computers]
+tags: [Projects,Tech]
 github_url: "https://github.com/JNPyles/8-Bit-Breadboard-Computer-Project"
 description: "A deep dive into the construction of a functional 8-bit CPU built entirely from discrete 74-series logic gates on breadboards."
 ---

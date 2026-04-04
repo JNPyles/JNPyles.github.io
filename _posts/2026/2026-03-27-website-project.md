@@ -1,11 +1,8 @@
 ---
-type: project
 title: "Personal Website"
 date: 2026-03-27
-categories: [Web]
-tags: [In Progress, Web, Markdown]
+tags: [Project]
 github_url: "https://github.com/JNPyles/JNPyles.github.io"
-description: "Documenting the development process and features of my website."
 ---
 
 ## Overview
