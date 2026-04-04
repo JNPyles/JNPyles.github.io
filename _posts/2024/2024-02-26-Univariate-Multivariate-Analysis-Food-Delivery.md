@@ -3,6 +3,8 @@ title: "Univariate and Multivariate Analysis of Food Delivery Service"
 date: 2024-02-26
 tags: [Data Science, Projects]
 ---
+**Note: This project is for academic and educational purposes only. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.**
+
 ## Executive Summary
 
 ### Context
