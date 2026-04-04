@@ -40,5 +40,5 @@ defaults:
   - scope:
         path: ""
         type: "ai_generated" # This must match the name in your collections list
-      values:
-        layout: "post"        # This tells Jekyll to use _layouts/post.html
+    values:
+      layout: "post"        # This tells Jekyll to use _layouts/post.html
