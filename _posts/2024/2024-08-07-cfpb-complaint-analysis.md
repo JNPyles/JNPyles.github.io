@@ -1,11 +1,8 @@
 ---
-type: project
 title: "Using Python to Explore CFPB Complaint Data"
 date: 2024-08-07
-description: "Exploratory data analysis of CFPB complaint data using Python."
+tags: [Project, Data Analytics, Python]
 image: "/assets/images/cfpb-project-preview.png" 
-category: Data Analysis
-tags: [Complete, Python]
 ---
 
 ## Executive Summary

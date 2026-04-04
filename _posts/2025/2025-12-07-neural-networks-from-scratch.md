@@ -1,9 +1,7 @@
 ---
-type: project
-title: "Neural Networks from Scratch"
+title: "Neural Networks from Scratch [In Progress]"
 date: 2025-12-07
-categories: [AI]
-tags: [In Progress, Machine Learning, Python]
+tags: [Project, Machine Learning, Python]
 github_url: https://github.com/JNPyles/Neural-Networks-from-Scratch
 description: "Building a neural network entirely from scratch using Python and NumPy to truly understand the underlying mathematics of deep learning."
 ---

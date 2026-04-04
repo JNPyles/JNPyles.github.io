@@ -1,11 +1,7 @@
 ---
-type: project
 title: "Bank Churn Prediction Using a Neural Network Classifier"
 date: 2024-06-04
-category: [AI]
-tags: [Complete,Python,Machine Learning]
-description: "Building a neural network-based classifier that can determine whether a customer will leave the bank or not in the next 6 months."
-excerpt: "Building a neural network-based classifier that can determine whether a customer will leave the bank or not in the next 6 months." 
+tags: [Project, Machine Learning]
 image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 ---
 ## Context

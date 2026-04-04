@@ -1,11 +1,8 @@
 ---
-type: project
 title: "8-Bit Breadboard Computer [In Progress]"
 date: 2025-05-21
-category: [Educational]
-tags: [Projects,Tech]
+tags: [Project, Technology]
 github_url: "https://github.com/JNPyles/8-Bit-Breadboard-Computer-Project"
-description: "A deep dive into the construction of a functional 8-bit CPU built entirely from discrete 74-series logic gates on breadboards."
 ---
 I am building an 8-bit breadboard computer together with my son as a fun way to learn how computers work. We are using Ben Eater's [8-bit Breadboard kit](https://eater.net/8bit/kits) and following along with his [Youtube course](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU).
 

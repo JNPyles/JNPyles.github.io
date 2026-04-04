@@ -1,9 +1,7 @@
 ---
-type: post
 title: "Preparation for the ABA's Certified Regulatory Compliance Manager (CRCM) Exam"
 date: 2022-09-05
-category: Certifications
-tags: [CRCM, Education, Banking, Compliance]
+tags: [Certifications]
 ---
 
 In August 2022, I successfully completed the CRCM examination. Below is a summary of my preparation efforts with links to resources I used and created. Hopefully, this information will be helpful to anyone currently planning to take the exam. 
