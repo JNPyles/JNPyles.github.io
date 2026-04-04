@@ -4,7 +4,8 @@ date: 2024-06-04
 tags: [Projects, Technology]
 gallery_folder: "assets/images/2025-04-06-MIPS-Assembly-Multiplication-Game"
 ---
-{% include gallery.html %}
+
+![Multiplication Game Start Screen]({{ site.baseurl }}/assets/images/2025-04-06-MIPS-Assembly-Multiplication-Game/multiplication_game_1.webp)
 
 This project is a functional, turn-based "Multiplication Game" developed in **MIPS Assembly**. It challenges the player to use multiplication facts to beat a computer opponent by being the first to connect four markers on a grid.
 
@@ -13,6 +14,8 @@ The implementation demonstrates core low-level programming concepts, including:
 * **Game Loop Logic:** A classic Render-Input-Update cycle.
 * **Dynamic UI Rendering:** Procedural generation of a game board and sidebar ASCII art.
 * **Simple AI Logic:** A rule-based computer opponent that searches for valid moves.
+
+![Multiplication Game]({{ site.baseurl }}/assets/images/2025-04-06-MIPS-Assembly-Multiplication-Game/multiplication_game_2.webp)
 
 ## 1. Project Structure
 
@@ -54,6 +57,7 @@ exit:
 		
 .include "data.asm"
 ```
+![Multiplication Game]({{ site.baseurl }}/assets/images/2025-04-06-MIPS-Assembly-Multiplication-Game/multiplication_game_3.webp)
 
 ### `game.asm`
 This module manages the state of the game, toggling between the player and computer turns using bitwise operations (`xori`).
@@ -135,6 +139,8 @@ start_art:
 	.ascii "|  \/  |_   _| | |_(_)_ __ | (_) ___ __ _| |_(_) ___  _ __\n"
     # ... (additional ASCII art lines)
 ```
+
+![Multiplication Game]({{ site.baseurl }}/assets/images/2025-04-06-MIPS-Assembly-Multiplication-Game/multiplication_game_4.webp)
 
 ## 4. Input & Logic
 
@@ -255,6 +261,7 @@ count_connected:
 	
 	jr $ra
 ```
+![Multiplication Game]({{ site.baseurl }}/assets/images/2025-04-06-MIPS-Assembly-Multiplication-Game/multiplication_game_5.webp)
 
 ## Conclusion
 This MIPS project showcases how high-level game mechanics can be distilled into assembly instructions. By managing memory directly and utilizing the limited register set of the MIPS architecture, "The Multiplication Game" provides a robust example of low-level systems programming.
