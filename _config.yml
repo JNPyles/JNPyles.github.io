@@ -26,14 +26,19 @@ highlighter: rouge
 minima:
   skin: dark  # or "dark", "solarized", "solarized-dark"
 
+collections:
+  ai_generated:
+    output: true
+    permalink: /ai_generated/:path/
+
 defaults:
   - scope:
       path: "" # An empty string here means "all files"
       type: "posts"
     values:
       layout: "post"
-
-collections:
-  ai_generated:
-    output: true
-    permalink: /ai_generated/:path/
+  - scope:
+        path: ""
+        type: "ai_generated" # This must match the name in your collections list
+      values:
+        layout: "post"        # This tells Jekyll to use _layouts/post.html
