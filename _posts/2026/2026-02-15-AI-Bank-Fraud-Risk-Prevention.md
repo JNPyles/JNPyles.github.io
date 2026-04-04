@@ -10,16 +10,12 @@ tags: [AI Governance, Academic Papers]
 ## Executive Summary
 This report discusses the historical evolution, current trends, and future risks of AI and automation in the banking sector, specifically focusing on fraud risk management. Historically, financial institutions relied on static, rule-based systems, but the increasing volume and complexity of digital transactions have necessitated a shift toward advanced machine learning and deep learning architectures. Currently, the industry faces an "arms race" where fraudsters utilize generative AI and AI agents to facilitate sophisticated, large-scale operations. To counter these evolving threats, financial institutions are increasingly integrating these same underlying technologies into their fraud programs. Future growth will be driven by "Agentic AI" frameworks that automate time-consuming manual workflows, such as drafting Suspicious Activity Reports (SARs), thereby reallocating human expertise toward high-level strategic remediation. However, widespread adoption faces significant challenges, including high implementation costs, the displacement of entry-level workforce roles, and ethical liabilities regarding algorithmic bias. Ultimately, success depends on establishing robust model governance and continuous employee reskilling to maintain resilient, adaptive defenses against automated financial crimes.
 
----
-
 ## Historical Overview of Trends
 For decades, banks and financial institutions have sought technologies to minimize financial losses, reputational damage, and administrative costs associated with fraudulent activities. Automated, computer-based solutions are necessary due to the high volume of digital transactions and the need for real-time response capabilities (Ali et al., 2022; Compagnino et al., 2025). 
 
 * **1980s:** Banks implemented **rules-based systems** using static "if-then" logic. For example, a bank might automatically flag any transfer over a certain dollar amount. However, these systems struggled with complex, non-linear fraud patterns.
 * **Late 2000s:** Institutions began integrating **machine learning models**, such as Random Forests and Support Vector Machines, trained on extensive historical databases to identify sophisticated anomalies (Dastidar et al., 2024).
 * **Late 2010s:** The adoption of **"deep" machine learning architectures** using artificial neural networks significantly furthered accuracy gains (Mienye & Jere, 2024).
-
----
 
 ## Current and Emerging Developments
 The emergence of generative AI, large language models (LLMs), and autonomous agents has introduced both new risks and opportunities. As of 2026, a staggering **75% of fraud and compliance decision-makers** have reported a direct increase in AI-driven fraud attacks over the past year (Veriff, 2026). 
@@ -29,16 +25,12 @@ Fraudsters apply generative models to create realistic synthetic identities and 
 2.  **Behavioral Biometrics:** Analyzing user interaction patterns like typing cadence and touchscreen pressure (Buriro et al., 2017).
 3.  **AI Agents:** Orchestrating rapid response workflows to collect data and recommend intervention actions (Joseph, 2024; Rawal et al., 2025).
 
----
-
 ## Future Opportunities for Growth in AI Adoption
 Future growth will be driven by **agentic AI architectures**. While AI has improved detection, processes like preparing regulatory reports remain manual. AI agents, capable of reasoning and tool-use, are developing the capacity to automate these high-volume tasks (Okpala et al., 2025). 
 
 > **Key Impact:** Automating the drafting of legally required Suspicious Activity Reports (SARs) significantly reduces administrative burdens, allowing human experts to focus on high-level strategic activities and in-depth investigations (Lagasio et al., 2025).
 
 By embracing agentic AI, banks can maintain robust defenses that effectively mitigate risks posed by automated financial crimes (Ahmed et al., 2025).
-
----
 
 ## Costs and Risks Associated with AI Adoption
 While AI systems promise efficiency, they introduce distinct challenges:
@@ -51,8 +43,6 @@ Recent testing by the National Physical Laboratory and industry reports highligh
 * **False Positive Rates (FPR):** White subjects typically see an FPR of approximately **0.04%**, whereas Asian subjects face **4.0%** and Black subjects face **5.5%**.
 * **Intersectionality:** The disparity is most severe for Black women, with error rates reaching as high as **9.9%** (The Guardian, 2025). 
 * **Legacy Bias:** Older studies like "Gender Shades" (2018) noted even wider gaps, with error rates of **0.8%** for light-skinned men versus **34.7%** for darker-skinned women, highlighting the persistent nature of this risk (Buolamwini & Gebru, 2018).
-
----
 
 ## Conclusion
 To meet the challenge of increasingly sophisticated AI-driven fraud, banks must embrace artificial neural networks, generative models, and agentic workflows while carefully managing risks:
