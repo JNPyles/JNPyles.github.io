@@ -2,9 +2,9 @@
 title: "Proposal for Responsible AI-Powered Credit Deicisions"
 date: 2025-12-04
 tags: [AI Governance, Academic Papers]
+dropbox_url: https://www.dropbox.com/scl/fi/ox78te3m5b3i3sijkmwxr/Brief-Draft-Proposal-for-Responsible-AI-Credit-Decisions.pdf?rlkey=kisqm7tildebdyt40bpz7hpmk&st=ss89yswx&dl=0
 ---
 *Note: This is a project I completed for Purdue's [AI Management and Policy Master's Program ](https://www.purdue.edu/online/artificial-intelligence/ai-management-and-policy/){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
-
 ---
 
 ## Executive Summary
