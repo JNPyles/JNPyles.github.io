@@ -1,6 +1,6 @@
 ---
 title: "Univariate and Multivariate Analysis of Food Delivery Service"
-date: 2024-04-13
+date: 2024-02-26
 tags: [Data Science, Projects]
 ---
 ## Executive Summary
