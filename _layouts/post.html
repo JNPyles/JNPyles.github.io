@@ -33,6 +33,12 @@ layout: default
 </header>
 
 <article>
+    <div class="gallery">
+      {% assign images = site.static_files | where_exp: "item", "item.path contains page.gallery_folder" %}
+      {% for image in images %}
+        <img src="{{ image.path | relative_url }}" alt="Gallery Image" class="gallery-thumb">
+      {% endfor %}
+    </div>
     {{ content }}
 </article>
 
