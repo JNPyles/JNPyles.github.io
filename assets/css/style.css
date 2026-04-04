@@ -140,7 +140,7 @@ nav .nav-links a.active {
 /* =========================================
    Post Lists & Meta Info
    ========================================= */
-   
+
 ul.post-list {
   list-style-type: none;
   padding: 0;
@@ -168,7 +168,7 @@ ul.year-grouped li {
   display: flex;
   align-items: baseline;
   margin-bottom: 0.6rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .date-short {
