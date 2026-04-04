@@ -153,6 +153,11 @@ nav .nav-links a.active {
   min-width: 0; /* Prevents text from breaking out of the container */
 }
 
+/* Removes the top margin from the very first heading in the main content area */
+.project-content > *:first-child {
+  margin-top: 0;
+}
+
 /* Sidebar styling */
 .tag-sidebar {
   flex: 0 0 200px; /* Sidebar stays at 200px width */
