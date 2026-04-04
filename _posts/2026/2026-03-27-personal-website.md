@@ -1,5 +1,5 @@
 ---
-title: "Personal Website"
+title: "Personal Website [In Progress]"
 date: 2026-03-27
 tags: [Projects, Technology]
 github_url: "https://github.com/JNPyles/JNPyles.github.io"
