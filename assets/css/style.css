@@ -13,11 +13,11 @@
    ========================================= */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 18px; /* Removed the 24px duplicate override */
+  font-size: 18px; 
   line-height: 1.6;
   color: var(--text);
   background-color: var(--bg);
-  max-width: 42rem; /* ~750px width, perfect for reading */
+  max-width: 54rem; /* Wide enough for sidebar + content */
   margin: 0 auto;
   padding: 2rem 1rem;
   -webkit-font-smoothing: antialiased;
@@ -32,15 +32,15 @@ h1, h2, h3 {
 }
 
 h1, h2 {
-  letter-spacing: -0.02em; /* Pulls the large letters slightly tighter together for a modern look */
+  letter-spacing: -0.02em; 
 }
 
 h3 {
-  letter-spacing: 0.01em; /* Gives smaller headers a tiny bit of breathing room */
+  letter-spacing: 0.01em; 
 }
 
 /* Improved Typographic Scale */
-h1 { font-size: 2.4rem; } /* Distinctly larger than other headers */
+h1 { font-size: 2.4rem; } 
 h2 { font-size: 1.7rem; }
 h3 { font-size: 1.25rem; }
 
@@ -51,13 +51,11 @@ p {
 
 a {
   color: var(--link);
-  text-decoration: none;
-  /* text-decoration-thickness: 0px;
-  text-underline-offset: 0px;
-  transition: text-decoration-thickness 0.2s ease; */
+  text-decoration: none; /* Global underline removal */
 }
 
 a:hover {
+  text-decoration: underline; /* Re-applies underline on hover */
   text-decoration-thickness: 2px;
 }
 
@@ -74,7 +72,7 @@ nav.site-nav {
 
 nav .nav-links a {
   margin-right: 1.2rem;
-  text-decoration: none;
+  /* text-decoration inherits 'none' from base <a> */
 }
 
 nav .nav-links a:hover {
@@ -111,7 +109,6 @@ nav .nav-links a.active {
 .nav-icons a {
   position: relative;
   display: inline-flex;
-  text-decoration: none;
 }
 
 .nav-icons a::after {
@@ -136,6 +133,76 @@ nav .nav-links a.active {
   opacity: 1;
   bottom: -40px; 
 }
+
+
+/* =========================================
+   Portfolio Layout (Tags & Projects)
+   ========================================= */
+
+/* The wrapper that creates the two columns */
+.portfolio-container {
+  display: flex;
+  flex-direction: row-reverse; /* Puts tags on the right, content on the left */
+  gap: 60px; /* Space between tags and projects */
+  align-items: flex-start;
+}
+
+/* Main Content Area */
+.project-content {
+  flex: 1; /* Takes up all remaining space on the left */
+  min-width: 0; /* Prevents text from breaking out of the container */
+}
+
+/* Sidebar styling */
+.tag-sidebar {
+  flex: 0 0 200px; /* Sidebar stays at 200px width */
+  position: sticky;
+  top: 2rem; /* Keeps it on screen as you scroll down */
+}
+
+/* Stack tags vertically */
+.tag-list {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.2;
+  text-align: left;
+}
+
+.tag-list a {
+  color: var(--text); /* Matches normal text instead of hyperlink blue */
+  font-size: 0.95rem;
+  border-bottom: none;
+}
+
+.tag-list a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.tag-list small {
+  opacity: 0.6;
+  margin-left: 4px;
+}
+
+/* Mobile View: Stack them back to normal on small screens */
+@media (max-width: 900px) {
+  .portfolio-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .tag-sidebar {
+    position: static;
+    flex: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .tag-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
 
 /* =========================================
    Post Lists & Meta Info
@@ -187,6 +254,7 @@ ul.year-grouped li {
   font-size: 0.85rem;
 }
 
+/* For tags listed inline next to project titles */
 .tag-link {
   color: var(--meta);
   text-decoration: none;
@@ -222,62 +290,16 @@ pre code.hljs {
   font-size: 0.85em;
 }
 
+/* Global Image Rules */
 img {
-  max-width: 100%; /* Ensures responsiveness */
+  max-width: 100%; 
   height: auto;
-  display: block; /* Prevents awkward inline spacing beneath images */
+  display: block; /* Prevents text-baseline gap under all images */
 }
 
-
-/* The wrapper that creates the two columns */
-.portfolio-container {
-  display: flex;
-  gap: 50px; /* Space between tags and projects */
-  align-items: flex-start;
-}
-
-/* Sidebar styling */
-.tag-sidebar {
-  flex: 0 0 180px; /* Sidebar stays at 180px width */
-  position: sticky;
-  top: 2rem; /* Keeps it on screen as you scroll down the years */
-}
-
-/* Stack tags vertically */
-.tag-list {
-  display: flex;
-  flex-direction: column;
-  line-height: 2.2;
-}
-
-.tag-link {
-  border-bottom: none;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.tag-link small {
-  opacity: 0.6;
-  margin-left: 4px;
-}
-
-/* Mobile View: Stack them back to normal on small screens */
-@media (max-width: 800px) {
-  .portfolio-container {
-    flex-direction: column;
-  }
-  .tag-sidebar {
-    position: static;
-    flex: none;
-    margin-bottom: 2rem;
-  }
-  .tag-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-}
-
+/* =========================================
+   Galleries
+   ========================================= */
 .gallery-grid {
   column-count: 3;
   column-gap: 10px;
@@ -290,8 +312,8 @@ img {
 
 .gallery-item img {
   width: 100%;
-  display: block;
   border-radius: 8px;
+  /* display: block; removed as it inherits from the global img rule */
 }
 
 @media (max-width: 800px) {
