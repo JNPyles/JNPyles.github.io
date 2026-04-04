@@ -4,7 +4,7 @@ date: 2024-06-04
 tags: [Projects, Data Science]
 image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 ---
-**Note: This project is for academic and educational purposes only. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.**
+**Note: This is a project I completed for U.T. Austin's [Post Graduate Program in AI & Machine Learning: Business Applications](https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.**
 
 ## Context
 Businesses like banks which provide services have to worry about the problem of 'Customer Churn' i.e., customers leaving and joining another service provider. It is important to understand which aspects of the service influence a customer's decision in this regard. Management can concentrate efforts on the improvement of service, keeping in mind these priorities.
