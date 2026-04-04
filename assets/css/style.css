@@ -153,7 +153,12 @@ nav .nav-links a.active {
   min-width: 0; /* Prevents text from breaking out of the container */
 }
 
-/* Removes the top margin from the very first heading in the main content area */
+/* Removes top margin from the very first heading, piercing through any template wrappers */
+.project-content .year-heading:first-of-type {
+  margin-top: 0 !important; /* Added !important just in case another Jekyll base class is fighting it */
+}
+
+/* Also strip the top margin of any hidden wrappers just in case */
 .project-content > *:first-child {
   margin-top: 0;
 }
