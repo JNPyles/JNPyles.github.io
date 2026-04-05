@@ -10,9 +10,8 @@ In 2012, I considered becoming an iOS app developer. At that time, iOS apps were
 
 My first app, Add Faster, went live on the app store on February 23, 2012. This was a simple addition practice app for children. It featured two modes: an untimed practice mode that presented randomly-generated addition problems and a timed version that tracked the number of correct answers, encouraging children to surpass previous records by answering faster. It also offered themes: chalkboard, strawberry, space, and ocean. 
 
-:-------------------------:|:-------------------------:
-![Add Faster Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/add_faster_1.webp) | ![Add Faster Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/add_faster_2.webp)
-![Add Faster Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/add_faster_4.webp) | ![Add Faster Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/add_faster_5.webp)
+:---:|:---:|:---:
+![Add Faster Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/add_faster_1.webp) | ![Add Faster Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/add_faster_2.webp) | ![Add Faster Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/add_faster_5.webp)
 
 ## Eine Note
 ![Eine Note Icon]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/eine_note_icon.webp)
@@ -26,6 +25,5 @@ My second app, Eine Note, went live on the app store on July 3, 2012. This was a
 - Export to email option
 - Copy to clipboard option
 
-:-------------------------:|:-------------------------:
-![Eine Note Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/eine_note_1.webp) | ![Eine Note Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/eine_note_2.webp) 
-![Eine Note Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/eine_note_3.webp) | ![Eine Note Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/eine_note_4.webp)
+:---:|:---:|:---:
+![Eine Note Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/eine_note_1.webp) | ![Eine Note Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/eine_note_2.webp) | ![Eine Note Screenshot]({{ site.baseurl }}/assets/images/2012/2012-02-23-ios-app-development/eine_note_4.webp)
