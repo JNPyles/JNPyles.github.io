@@ -3,7 +3,7 @@ title: "Univariate and Multivariate Analysis of Food Delivery Service"
 date: 2024-02-26
 tags: [Data Science, Projects]
 ---
-*Note: This is a project I completed for U.T. Austin's [Post Graduate Program in AI & Machine Learning: Business Applications](https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
+*Note: This is a project I completed for U.T. Austin's [Post Graduate Program in AI & Machine Learning: Business Applications](https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course). The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
 
 ## Executive Summary
 
