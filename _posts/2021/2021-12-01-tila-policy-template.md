@@ -1,12 +1,12 @@
 ---
 title: "Mortgage Compliance Policy Template: Truth in Lenidng Act (TILA) & Regulation Z"
 date: 2021-12-01
-tags: [Compliance]
+tags: [Banking Compliance]
 ---
 
 # COMPLIANCE POLICY MANUAL
-## Truth In Lending Act
-**Company:** `[Company Name]`
+## Truth In Lending Act & Regulation Z
+**Lender:** `[Company Name]`
 **Version:** `[Version Number]`
 **Date:** `[Date]`
 
