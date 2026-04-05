@@ -1,11 +1,11 @@
-/* Minimalist Base Variables (Permanent Dark Mode) */
+/* Minimalist Base Variables (Solarized Dark Mode) */
 :root {
-  --bg: #18181b;
-  --text: #d1d5db;
-  --link: #66b3ff;
-  --meta: #888888;
-  --tooltip-bg: #f9f9f9; 
-  --tooltip-text: #333333;
+  --bg: #002b36;           /* Solarized base03 */
+  --text: #839496;         /* Solarized base0 */
+  --link: #268bd2;         /* Solarized blue */
+  --meta: #586e75;         /* Solarized base01 */
+  --tooltip-bg: #073642;   /* Solarized base02 */
+  --tooltip-text: #93a1a1; /* Solarized base1 */
 }
 
 /* =========================================
@@ -35,6 +35,7 @@ h1, h2, h3 {
   line-height: 1.2;
   margin-top: 2em;
   margin-bottom: 0.5em;
+  color: #93a1a1; /* Solarized base1 for slightly brighter headings */
 }
 
 h1, h2 {
@@ -108,6 +109,7 @@ nav .nav-links a.active {
 
 .nav-icons a:hover svg {
   transform: scale(1.15);
+  fill: var(--link); /* Adds a subtle blue hover state to icons */
 }
 
 /* Tooltip */
@@ -138,7 +140,6 @@ nav .nav-links a.active {
   opacity: 1;
   bottom: -2.5rem; 
 }
-
 
 /* =========================================
    Portfolio Layout (Tags & Projects)
@@ -198,8 +199,7 @@ nav .nav-links a.active {
   margin-left: 0.25rem;
 }
 
-/* Mobile View: I increased the breakpoint by 25% (900 -> 1125px) 
-   so the layout collapses earlier to accommodate the larger elements */
+/* Mobile View */
 @media (max-width: 1125px) {
   .portfolio-container {
     flex-direction: column;
@@ -217,7 +217,6 @@ nav .nav-links a.active {
     gap: 1rem;
   }
 }
-
 
 /* =========================================
    Post Lists & Meta Info
@@ -284,8 +283,8 @@ ul.year-grouped li {
    ========================================= */
 figure.highlight, 
 pre {
-  background: #2d2d2d;
-  color: #f8f8f2;
+  background: #073642; /* Solarized base02 */
+  color: #839496;      /* Solarized base0 */
   padding: 1rem;
   border-radius: 0.3rem;
   overflow-x: auto;
@@ -293,11 +292,11 @@ pre {
   font-family: "Courier New", Courier, monospace;
 }
 
-.highlight .comment  { color: #999; font-style: italic; }
-.highlight .keyword  { color: #cc99cd; font-weight: bold; }
-.highlight .string   { color: #7ec699; }
-.highlight .number   { color: #f08d49; }
-.highlight .function { color: #f8c555; }
+.highlight .comment  { color: #586e75; font-style: italic; } /* Solarized base01 */
+.highlight .keyword  { color: #859900; font-weight: bold; }  /* Solarized green */
+.highlight .string   { color: #2aa198; }                     /* Solarized cyan */
+.highlight .number   { color: #dc322f; }                     /* Solarized red */
+.highlight .function { color: #268bd2; }                     /* Solarized blue */
 
 pre code.hljs {
   font-size: 0.85em;
@@ -336,8 +335,9 @@ img {
 }
 
 .post-note {
-  background-color: #f8f9fa;
-  border-left: 5px solid #007bff;
+  background-color: #073642;      /* Solarized base02 to match dark mode */
+  border-left: 5px solid #268bd2; /* Solarized blue */
+  color: var(--text);             /* Ensure text remains readable */
   padding: 15px;
   margin-bottom: 20px;
   font-style: italic;
