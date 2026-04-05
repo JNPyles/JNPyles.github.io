@@ -4,7 +4,7 @@ date: 2025-12-04
 tags: [AI Governance, Academic Papers]
 dropbox_url: https://www.dropbox.com/scl/fi/ox78te3m5b3i3sijkmwxr/Brief-Draft-Proposal-for-Responsible-AI-Credit-Decisions.pdf?rlkey=kisqm7tildebdyt40bpz7hpmk&st=ss89yswx&dl=0
 ---
-{% include note.html content="This is a project I completed for Purdue's [AI Management and Policy Master's Program ](https://www.purdue.edu/online/artificial-intelligence/ai-management-and-policy/){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity." %}
+*Note: This is a project I completed for Purdue's [AI Management and Policy Master's Program ](https://www.purdue.edu/online/artificial-intelligence/ai-management-and-policy/){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
 
 ## Executive Summary
 Ficus Bank (Ficus) faces a pivotal choice: continue with manual underwriting processes that are increasingly slow and exclusionary or transition to an AI-driven model. While AI offers a path to rapid decisioning and broader financial inclusion, it introduces risks regarding algorithmic bias and transparency. This proposal recommends integrating the **NIST AI Risk Management Framework (AI RMF)** to ensure that Ficus’s modernization is both compliant with emerging state laws (like the Colorado AI Act) and aligned with the bank’s core values of equity and security.
