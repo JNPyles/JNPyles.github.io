@@ -1,11 +1,11 @@
-/* Minimalist Base Variables (Solarized Dark Mode) */
+/* Minimalist Base Variables (Solarized Light Mode) */
 :root {
-  --bg: #002b36;           /* Solarized base03 */
-  --text: #839496;         /* Solarized base0 */
+  --bg: #fdf6e3;           /* Solarized base3 */
+  --text: #657b83;         /* Solarized base00 */
   --link: #268bd2;         /* Solarized blue */
-  --meta: #586e75;         /* Solarized base01 */
-  --tooltip-bg: #073642;   /* Solarized base02 */
-  --tooltip-text: #93a1a1; /* Solarized base1 */
+  --meta: #93a1a1;         /* Solarized base1 */
+  --tooltip-bg: #eee8d5;   /* Solarized base2 */
+  --tooltip-text: #586e75; /* Solarized base01 */
 }
 
 /* =========================================
@@ -35,7 +35,7 @@ h1, h2, h3 {
   line-height: 1.2;
   margin-top: 2em;
   margin-bottom: 0.5em;
-  color: #93a1a1; /* Solarized base1 for slightly brighter headings */
+  color: #586e75; /* Solarized base01 for slightly darker headings */
 }
 
 h1, h2 {
@@ -283,8 +283,8 @@ ul.year-grouped li {
    ========================================= */
 figure.highlight, 
 pre {
-  background: #073642; /* Solarized base02 */
-  color: #839496;      /* Solarized base0 */
+  background: #eee8d5; /* Solarized base2 */
+  color: #657b83;      /* Solarized base00 */
   padding: 1rem;
   border-radius: 0.3rem;
   overflow-x: auto;
@@ -292,7 +292,7 @@ pre {
   font-family: "Courier New", Courier, monospace;
 }
 
-.highlight .comment  { color: #586e75; font-style: italic; } /* Solarized base01 */
+.highlight .comment  { color: #93a1a1; font-style: italic; } /* Solarized base1 */
 .highlight .keyword  { color: #859900; font-weight: bold; }  /* Solarized green */
 .highlight .string   { color: #2aa198; }                     /* Solarized cyan */
 .highlight .number   { color: #dc322f; }                     /* Solarized red */
@@ -335,9 +335,9 @@ img {
 }
 
 .post-note {
-  background-color: #073642;      /* Solarized base02 to match dark mode */
+  background-color: #eee8d5;      /* Solarized base2 to match light mode */
   border-left: 5px solid #268bd2; /* Solarized blue */
-  color: var(--text);             /* Ensure text remains readable */
+  color: var(--text);             
   padding: 15px;
   margin-bottom: 20px;
   font-style: italic;
@@ -345,6 +345,6 @@ img {
 }
 
 .post-note::before {
-  content: "📝 "; /* Adds an icon automatically */
+  content: "📝 "; 
   font-style: normal;
 }
