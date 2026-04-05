@@ -1,41 +1,29 @@
-/* Minimalist Base Variables (No-Style-Please) */
+/* Minimalist Base Variables (Solarized Dark Mode) */
 :root {
-  --bg: #ffffff;
-  --text: #000000;
-  --link: #0000ee; /* Classic browser blue */
-  --meta: #555555;
-  --tooltip-bg: #eeeeee; 
-  --tooltip-text: #000000;
-}
-
-/* Auto-switch to dark mode based on system preferences */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121212;
-    --text: #e0e0e0;
-    --link: #5ea8ff; /* Readable blue for dark backgrounds */
-    --meta: #999999;
-    --tooltip-bg: #222222; 
-    --tooltip-text: #ffffff;
-  }
+  --bg: #002b36;           /* Solarized base03 */
+  --text: #839496;         /* Solarized base0 */
+  --link: #268bd2;         /* Solarized blue */
+  --meta: #586e75;         /* Solarized base01 */
+  --tooltip-bg: #073642;   /* Solarized base02 */
+  --tooltip-text: #93a1a1; /* Solarized base1 */
 }
 
 /* =========================================
    Base Layout & Typography
    ========================================= */
 html {
-  /* Scales the baseline from 16px to 20px */
+  /* This scales the baseline from 16px to 20px. 
+     Every 'rem' value below is automatically 25% larger! */
   font-size: 125%; 
 }
 
 body {
-  /* Using standard system sans-serif for that raw but clean look */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 1.125rem; 
+  font-size: 1.125rem; /* Equivalent to 22.5px (was 18px) */
   line-height: 1.6;
   color: var(--text);
   background-color: var(--bg);
-  max-width: 54rem; 
+  max-width: 54rem; /* Automatically scaled up to 1080px (was 864px) */
   margin: 0 auto;
   padding: 2rem 1rem;
   -webkit-font-smoothing: antialiased;
@@ -43,11 +31,11 @@ body {
 }
 
 h1, h2, h3 {
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.2;
   margin-top: 2em;
   margin-bottom: 0.5em;
-  color: var(--text);
+  color: #93a1a1; /* Solarized base1 for slightly brighter headings */
 }
 
 h1, h2 {
@@ -58,7 +46,7 @@ h3 {
   letter-spacing: 0.01em; 
 }
 
-/* Typographic Scale */
+/* Improved Typographic Scale */
 h1 { font-size: 2.4rem; } 
 h2 { font-size: 1.7rem; }
 h3 { font-size: 1.25rem; }
@@ -75,7 +63,7 @@ a {
 
 a:hover {
   text-decoration: underline; 
-  text-decoration-thickness: 1px; /* Thinner, native underline */
+  text-decoration-thickness: 2px;
 }
 
 /* =========================================
@@ -93,9 +81,16 @@ nav .nav-links a {
   margin-right: 1.2rem;
 }
 
+nav .nav-links a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
 nav .nav-links a.active {
   text-decoration: underline;
-  font-weight: bold;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 /* Icon Container & Sizing */
@@ -106,15 +101,15 @@ nav .nav-links a.active {
 }
 
 .nav-icons svg {
-  width: 2rem;  
+  width: 2rem;  /* Scaled to 40px (was 32px) */
   height: 2rem;
   fill: var(--text);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease-in-out, fill 0.2s;
 }
 
 .nav-icons a:hover svg {
-  transform: scale(1.1);
-  fill: var(--link);
+  transform: scale(1.15);
+  fill: var(--link); /* Adds a subtle blue hover state to icons */
 }
 
 /* Tooltip */
@@ -132,33 +127,39 @@ nav .nav-links a.active {
   background-color: var(--tooltip-bg); 
   color: var(--tooltip-text);          
   padding: 0.25rem 0.5rem;
-  border: 1px solid var(--meta); /* Adds a raw border to the tooltip */
+  border-radius: 0.25rem;
   font-size: 0.75rem;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.2s ease, bottom 0.2s ease;
   z-index: 10;
 }
 
 .nav-icons a:hover::after {
   opacity: 1;
+  bottom: -2.5rem; 
 }
 
 /* =========================================
    Portfolio Layout (Tags & Projects)
    ========================================= */
+
+/* The wrapper that creates the two columns */
 .portfolio-container {
   display: flex;
   flex-direction: row-reverse; 
-  gap: 3.75rem; 
+  gap: 3.75rem; /* Scaled to 75px (was 60px) */
   align-items: flex-start;
 }
 
+/* Main Content Area */
 .project-content {
   flex: 1; 
   min-width: 0; 
 }
 
+/* Removes top margin from the very first heading */
 .project-content .year-heading:first-of-type {
   margin-top: 0 !important; 
 }
@@ -167,12 +168,14 @@ nav .nav-links a.active {
   margin-top: 0;
 }
 
+/* Sidebar styling */
 .tag-sidebar {
-  flex: 0 0 12.5rem; 
+  flex: 0 0 12.5rem; /* Scaled to 250px (was 200px) */
   position: sticky;
   top: 2rem; 
 }
 
+/* Stack tags vertically */
 .tag-list {
   display: flex;
   flex-direction: column;
@@ -183,13 +186,20 @@ nav .nav-links a.active {
 .tag-list a {
   color: var(--text); 
   font-size: 0.95rem;
+  border-bottom: none;
+}
+
+.tag-list a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 .tag-list small {
-  opacity: 0.7;
+  opacity: 0.6;
   margin-left: 0.25rem;
 }
 
+/* Mobile View */
 @media (max-width: 1125px) {
   .portfolio-container {
     flex-direction: column;
@@ -211,6 +221,7 @@ nav .nav-links a.active {
 /* =========================================
    Post Lists & Meta Info
    ========================================= */
+
 ul.post-list {
   list-style-type: none;
   padding: 0;
@@ -232,8 +243,6 @@ ul.post-list li {
 h3.year-heading {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid var(--meta); /* Adds visual separation */
-  padding-bottom: 0.2rem;
 }
 
 ul.year-grouped li {
@@ -244,7 +253,7 @@ ul.year-grouped li {
 }
 
 .date-short {
-  min-width: 4rem; 
+  min-width: 4rem; /* Scaled to 80px (was 65px) */
   flex-shrink: 0;
   font-family: monospace;
   color: var(--meta);
@@ -265,26 +274,29 @@ ul.year-grouped li {
   margin-right: 0.4rem;
 }
 
+.tag-link:hover {
+  text-decoration: underline;
+}
+
 /* =========================================
    Code Blocks & Media
    ========================================= */
 figure.highlight, 
 pre {
-  background: var(--tooltip-bg); /* Use light grey or dark grey based on mode */
-  color: var(--text);
+  background: #073642; /* Solarized base02 */
+  color: #839496;      /* Solarized base0 */
   padding: 1rem;
-  border: 1px solid var(--meta); /* Raw outline */
+  border-radius: 0.3rem;
   overflow-x: auto;
   line-height: 1.5;
   font-family: "Courier New", Courier, monospace;
 }
 
-/* Stripped down, brutalist syntax highlighting */
-.highlight .comment  { color: var(--meta); font-style: italic; }
-.highlight .keyword  { font-weight: bold; }
-.highlight .string   { text-decoration: underline; }
-.highlight .number   { font-weight: bold; }
-.highlight .function { font-style: italic; }
+.highlight .comment  { color: #586e75; font-style: italic; } /* Solarized base01 */
+.highlight .keyword  { color: #859900; font-weight: bold; }  /* Solarized green */
+.highlight .string   { color: #2aa198; }                     /* Solarized cyan */
+.highlight .number   { color: #dc322f; }                     /* Solarized red */
+.highlight .function { color: #268bd2; }                     /* Solarized blue */
 
 pre code.hljs {
   font-size: 0.85em;
@@ -294,7 +306,6 @@ img {
   max-width: 100%; 
   height: auto;
   display: block; 
-  border: 1px solid var(--meta); /* Keep images strictly boxed */
 }
 
 /* =========================================
@@ -312,8 +323,10 @@ img {
 
 .gallery-item img {
   width: 100%;
+  border-radius: 0.5rem;
 }
 
+/* Media queries scaled up roughly 25% to account for larger components */
 @media (max-width: 1000px) {
   .gallery-grid { column-count: 2; }
 }
@@ -321,18 +334,17 @@ img {
   .gallery-grid { column-count: 1; }
 }
 
-/* Post Note */
 .post-note {
-  background-color: transparent;
-  border: 1px solid var(--meta); /* Plain box instead of colored background */
-  border-left: 5px solid var(--text); /* Strong left border to catch attention */
+  background-color: #073642;      /* Solarized base02 to match dark mode */
+  border-left: 5px solid #268bd2; /* Solarized blue */
+  color: var(--text);             /* Ensure text remains readable */
   padding: 15px;
   margin-bottom: 20px;
   font-style: italic;
+  border-radius: 4px;
 }
 
 .post-note::before {
-  content: "Note: "; 
-  font-weight: bold;
+  content: "📝 "; /* Adds an icon automatically */
   font-style: normal;
 }
