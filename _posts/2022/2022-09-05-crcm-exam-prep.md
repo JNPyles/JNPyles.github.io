@@ -1,5 +1,5 @@
 ---
-title: "Preparation for the ABA's Certified Regulatory Compliance Manager (CRCM) Exam"
+title: "Certified Regulatory Compliance Manager (CRCM) Exam Prep"
 date: 2022-09-05
 tags: [Certifications]
 ---

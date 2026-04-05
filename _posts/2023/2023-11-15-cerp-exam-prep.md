@@ -1,5 +1,5 @@
 ---
-title: "Preparation for the ABA's Certified Enterprise Risk Professional (CERP) Exam"
+title: "Certified Enterprise Risk Professional (CERP) Exam Prep"
 date: 2023-11-15
 tags: [Certifications]
 ---

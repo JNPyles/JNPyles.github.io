@@ -334,3 +334,17 @@ img {
 @media (max-width: 625px) {
   .gallery-grid { column-count: 1; }
 }
+
+.post-note {
+  background-color: #f8f9fa;
+  border-left: 5px solid #007bff;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-style: italic;
+  border-radius: 4px;
+}
+
+.post-note::before {
+  content: "📝 "; /* Adds an icon automatically */
+  font-style: normal;
+}
