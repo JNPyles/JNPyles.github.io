@@ -33,12 +33,12 @@ collections:
 
 defaults:
   - scope:
-      path: "" # An empty string here means "all files"
+      path: ""
       type: "posts"
     values:
       layout: "post"
   - scope:
-        path: ""
-        type: "ai_generated" # This must match the name in your collections list
+      path: ""
+      type: "ai_generated"
     values:
-      layout: "post"        # This tells Jekyll to use _layouts/post.html
+      layout: "ai-post"
