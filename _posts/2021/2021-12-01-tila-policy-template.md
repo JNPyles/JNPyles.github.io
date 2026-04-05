@@ -1,9 +1,10 @@
 ---
-title: "Compliance Policy Template: Truth in Lenidng Act (TILA) & Regulation Z"
+title: "Mortgage Compliance Policy Template: Truth in Lenidng Act (TILA) & Regulation Z"
 date: 2021-12-01
 tags: [Compliance]
 ---
 
+# COMPLIANCE POLICY MANUAL
 ## Truth In Lending Act
 **Company:** `[Company Name]`
 **Version:** `[Version Number]`
@@ -11,7 +12,7 @@ tags: [Compliance]
 
 ### About This Policy
 
-* **Purpose:** `[Company Name]` has established this policy to ensure compliance with the applicable provisions of the Truth in Lending Act (TILA) and its implementing regulation, Regulation Z.
+* **Purpose:** `[Company Name]` has established this policy to ensure compliance with the applicable mortgage lending provisions of the Truth in Lending Act (TILA) and its implementing regulation, Regulation Z.
 * **Summary:** The Truth in Lending Act (TILA) promotes the informed use of consumer credit by disclosing the cost of credit and actual terms to consumers in a way that is easily understood.
 * **Policy Statement:** It is the policy of `[Company Name]` to comply with all applicable requirements of the Truth In Lending Act (TILA) and Regulation Z.
 * **Scope:** This policy applies to credit that is offered or extended to consumers primarily for personal, family or household purposes. Regulation Z does not apply to the following:
@@ -25,10 +26,12 @@ tags: [Compliance]
 
 #### Roles and Responsibilities
 * **Closing/Funding:** See sections titled "Finance Charge and Annual Percentage Rate (APR)," "Disclosures," and "Right of Rescission."
+* **Compliance/Management:** See section titled "Administrative and Governance Requirements."
 * **Disclosure Desk:** See sections titled "Finance Charge and Annual Percentage Rate (APR)" and "Disclosures."
 * **Loan Originators:** See section titled "Prohibited Acts and Practices in Connection with a Mortgage Loan."
 * **Marketing:** See section titled "Advertising."
 * **Operations:** See sections titled "High-Cost Mortgages," "Higher-Priced Mortgage Loans," and "Valuation Independence."
+* **Servicing:** See section titled "Mortgage Servicing & Post-Consummation Rules."
 * **Underwriting:** See sections titled "Ability to Repay / Qualified Mortgage" and "Valuation Independence."
 
 ### Definitions
@@ -64,19 +67,34 @@ tags: [Compliance]
 #### General Disclosure Requirements
 * **Policy:** It is the policy of `[Company Name]` to make all disclosures required by Regulation Z clearly and conspicuously in writing, in a form that the consumer may keep. Disclosures may be provided electronically, subject to E-Sign Act compliance.
 
+#### TILA-RESPA Integrated Disclosures (TRID)
+* **Policy:** `[Company Name]` must provide consumers with clear, integrated disclosures regarding the costs and terms of their mortgage loan.
+* **Implementation Details:** * **Loan Estimate:** Must be delivered or placed in the mail no later than the third specific business day after receiving the consumer's application.
+    * **Closing Disclosure:** Must be provided to the consumer at least three specific business days before consummation of the loan.
+    * For comprehensive procedures and tolerance limitations, see the `[Company Name]` TILA-RESPA Integrated Disclosures policy.
+
 #### Variable-Rate (ARM) Disclosures
 * **Policy:** For variable-rate mortgage transactions secured by the consumer's principal dwelling, `[Company Name]` will provide the "Consumer Handbook on Adjustable Rate Mortgages" booklet and an "Adjustable-Rate Mortgage" disclosure based on Appendix X of Regulation Z. These must be provided at the time an application form is provided or before the consumer pays a non-refundable fee, whichever is earlier.
 
 #### Special Information Booklet
 * **Policy:** Not later than three business days after receiving a consumer's application for a mortgage loan to purchase a one-to-four family residential property, `[Company Name]` must provide the CFPB's "Your Home Loan Toolkit".
 
+### Mortgage Servicing & Post-Consummation Rules
+
+#### Periodic Statements
+* **Policy:** `[Company Name]` (or its designated subservicer) will provide consumers with clear and regular periodic statements for residential mortgage loans in accordance with the timing and content requirements of Regulation Z.
+
+#### Prompt Crediting and Payoff Statements
+* **Policy:** Mortgage payments must be credited to the consumer's account on the date of receipt. Additionally, accurate payoff statements must be provided within a reasonable time, not to exceed seven business days after receiving a written request from the consumer or authorized representative.
+
+#### Mortgage Transfer Disclosures
+* **Policy:** If `[Company Name]` acquires or purchases the legal title to a mortgage loan, a Notice of New Creditor must be mailed or delivered to the borrower within 30 days of the acquisition, detailing the transfer of ownership.
+
 ### Additional Regulatory Requirements
 
-* **Right of Rescission:** Refer to the `[Company Name]` Right of Rescission policy.
-* **Advertising:** Refer to the `[Company Name]` Mortgage Advertising policy.
-* **Loan Originator Compensation:** Refer to the `[Company Name]` Loan Originator Compensation policy.
-* **Ability to Repay / Qualified Mortgage:** Refer to the `[Company Name]` Ability to Repay / Qualified Mortgage policy.
-* **Valuation Independence:** Refer to the `[Company Name]` Appraiser Independence policy.
+#### Right of Rescission
+* **Policy:** In a credit transaction in which a security interest is or will be retained or acquired in a consumer's principal dwelling (such as a refinance or home equity loan), each consumer whose ownership interest is subject to the security interest shall have the right to rescind the transaction.
+* **Implementation Details:** The consumer may exercise the right to rescind until midnight of the third business day following consummation, delivery of the notice of right to rescind, or delivery of all material disclosures, whichever occurs last. Refer to the `[Company Name]` Right of Rescission policy for detailed handling procedures.
 
 #### High-Cost Mortgages
 * **Policy:** It is the policy of `[Company Name]` to not make high-cost loans as defined in Regulation Z. A high-cost mortgage includes loans where the APR exceeds the APOR by more than 6.5% for a first-lien transaction, total points and fees exceed 5% of the total loan amount (for loans $20,000 or more), or prepayment penalties exceed certain thresholds.
@@ -86,3 +104,25 @@ tags: [Compliance]
 * **Definition:** A closed-end consumer credit transaction secured by the consumer's principal dwelling with an APR that exceeds the average prime offer rate by 1.5% or more for conforming first liens, 2.5% or more for jumbo first liens, or 3.5% or more for subordinate liens.
 * **Escrow Accounts:** For higher-priced mortgage loans, `[Company Name]` must establish an escrow account before consummation for payment of taxes and property insurance.
 * **Appraisal Requirements:** Since qualified mortgages are exempt from higher-priced mortgage appraisal requirements, and since `[Company Name]` limits loan origination to qualified mortgages, Regulation Z's appraisal requirements for higher-priced mortgage loans are not applicable.
+
+#### Cross-Referenced Policies
+For further specific requirements under TILA, refer to the following internal policies:
+* **Advertising:** Refer to the `[Company Name]` Mortgage Advertising policy.
+* **Loan Originator Compensation:** Refer to the `[Company Name]` Loan Originator Compensation policy.
+* **Ability to Repay / Qualified Mortgage:** Refer to the `[Company Name]` Ability to Repay / Qualified Mortgage policy.
+* **Valuation Independence:** Refer to the `[Company Name]` Appraiser Independence policy.
+
+### Administrative and Governance Requirements
+
+#### Record Retention
+* **Policy:** `[Company Name]` will retain evidence of compliance with Regulation Z to demonstrate adherence to all disclosure and procedural requirements.
+* **Implementation Details:** * General TILA disclosures must be retained for 2 years.
+    * The Loan Estimate must be retained for 3 years after the later of the date of consummation, the date disclosures are required to be made, or the date the action is required to be taken.
+    * The Closing Disclosure and all associated documents must be retained for 5 years after consummation.
+
+#### Error Resolution and Tolerance Cures
+* **Policy:** `[Company Name]` is committed to accurate disclosures. If a tolerance violation or disclosure error is discovered, prompt corrective action will be taken.
+* **Implementation Details:** If amounts paid by the consumer exceed applicable tolerance thresholds, the violation must be cured by refunding the excess amount to the borrower within 60 days of consummation. Corrected disclosures must be provided concurrently as required by Regulation Z.
+
+#### Escalation and Non-Compliance
+* **Policy:** Strict adherence to TILA and Regulation Z is mandatory. Any employee who identifies a potential or actual violation of this policy must immediately escalate the issue to the Compliance Department. Failure to comply with this policy may result in disciplinary action, up to and including termination of employment.
