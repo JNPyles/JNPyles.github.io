@@ -348,7 +348,3 @@ img {
   content: "📝 "; /* Adds an icon automatically */
   font-style: normal;
 }
-
-.image-gallery {
-  display: inline;
-}
