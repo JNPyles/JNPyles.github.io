@@ -3,7 +3,7 @@ title: "AI Risk Impact Assessement Proposal: Biometric Identity Verification"
 date: 2026-03-01
 tags: [AI Governance, Academic Papers]
 ---
-*Note: This is a project I completed for Purdue's [AI Management and Policy Master's Program ](https://www.purdue.edu/online/artificial-intelligence/ai-management-and-policy/){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
+> *Note: This is a project I completed for Purdue's [AI Management and Policy Master's Program ](https://www.purdue.edu/online/artificial-intelligence/ai-management-and-policy/){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
 
 ---
 
