@@ -7,7 +7,7 @@ title: Home
 {% assign sorted_tags = site.tags | sort %}
 
 <div class="portfolio-container">
-  
+		<h3>Tags</h3>
   <aside class="tag-sidebar">
     <nav class="tag-list">
       {% for tag in sorted_tags %}
@@ -17,7 +17,7 @@ title: Home
       {% endfor %}
     </nav>
   </aside>
-
+		<hr>
   <main class="project-content">
 				{% for item in site.posts %}
 						{% capture item_year %}{{ item.date | date: "%Y" }}{% endcapture %}
