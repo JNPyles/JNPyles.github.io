@@ -6,34 +6,24 @@ title: Home
 {% assign current_year = "" %}
 {% assign sorted_tags = site.tags | sort %}
 
-<nav>
-  <h3>Tags</h3>
-  {% for tag in sorted_tags %}
-    <a href="/tags/#{{ tag[0] | slugify }}">
-     {{ tag[0] }} <small>({{ tag[1].size }})</small>
-    </a>{% unless forloop.last %} &middot; {% endunless %}
-  {% endfor %}
-</nav>
+<h2>Tags</h2>
+{% for tag in sorted_tags %}
+		<a href="/tags/#{{ tag[0] | slugify }}">
+			{{ tag[0] }} <small>({{ tag[1].size }})</small>
+		</a>{% unless forloop.last %} &middot; {% endunless %}
+{% endfor %}
 
 <hr>
 
 <main>
-  {% for item in site.posts %}
-    {% capture item_year %}{{ item.date | date: "%Y" }}{% endcapture %}
-    
-    {% if item_year != current_year %}
-      {% unless forloop.first %}</ul>{% endunless %}
-      <h3>{{ item_year }}</h3>
-      <ul>
-      {% assign current_year = item_year %}
-    {% endif %}
-
-    <li>
-      <a href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }}</a>
-    </li>
-
-    {% if forloop.last %}</ul>{% endif %}
-  {% endfor %}  
+	   <h2>Posts</h2>
+				<ul>
+						{% for item in site.posts %}
+								<li>
+										<a href="{{ item.url }}">{{ item.title }}</a> — {{ item.date | date: "%B %d, %Y" }}
+								</li>
+						{% endfor %}
+				</ul>
 
   {% if site.ai_generated %}
     <hr>
