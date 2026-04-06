@@ -14,7 +14,8 @@
 </head>
 <body>
     <nav>
-        <a href="/"><strong>{{ site.title }}</strong></a>
+        <a href="/"><strong>{{ site.title }}</strong></a> &middot; 
+        <a href="/tags/">Tags</a> &middot; 
     </nav>
     
     <hr>
@@ -22,5 +23,10 @@
     <main>
         {{ content }}
     </main>
+    <hr>
+    <footer style="text-align: center; color: var(--meta); font-size: 0.9rem; margin-bottom: 2rem;">
+        &copy; {{ site.time | date: '%Y' }} {{ site.title }}. Built with Jekyll.
+    </footer>
+</body>
 </body>
 </html>

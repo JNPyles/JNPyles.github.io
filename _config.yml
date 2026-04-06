@@ -11,6 +11,8 @@ author:
 # Tell GitHub Pages to use the SEO plugin
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
 
 markdown: kramdown
 kramdown:
