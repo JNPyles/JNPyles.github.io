@@ -6,45 +6,44 @@ title: Home
 {% assign current_year = "" %}
 {% assign sorted_tags = site.tags | sort %}
 
-<div class="portfolio-container">
-		<h3>Tags</h3>
-  <aside class="tag-sidebar">
-    <nav class="tag-list">
-      {% for tag in sorted_tags %}
-        <a href="/tags/#{{ tag[0] | slugify }}" class="tag-link">
-         {{ tag[0] }} <small>({{ tag[1].size }})</small>
-        </a><br/>
+<nav>
+  <h3>Tags</h3>
+  {% for tag in sorted_tags %}
+    <a href="/tags/#{{ tag[0] | slugify }}">
+     {{ tag[0] }} <small>({{ tag[1].size }})</small>
+    </a>{% unless forloop.last %} &middot; {% endunless %}
+  {% endfor %}
+</nav>
+
+<hr>
+
+<main>
+  {% for item in site.posts %}
+    {% capture item_year %}{{ item.date | date: "%Y" }}{% endcapture %}
+    
+    {% if item_year != current_year %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h3>{{ item_year }}</h3>
+      <ul>
+      {% assign current_year = item_year %}
+    {% endif %}
+
+    <li>
+      <a href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }}</a>
+    </li>
+
+    {% if forloop.last %}</ul>{% endif %}
+  {% endfor %}  
+
+  {% if site.ai_generated %}
+    <hr>
+    <h3>AI Generated Content</h3>
+    <ul>
+      {% for content in site.ai_generated %}
+        <li>
+          <a href="{{ content.url }}">{{ content.title }}</a> - {{ content.client }}
+        </li>
       {% endfor %}
-    </nav>
-  </aside>
-		<hr>
-  <main class="project-content">
-				{% for item in site.posts %}
-						{% capture item_year %}{{ item.date | date: "%Y" }}{% endcapture %}
-						
-						{% if item_year != current_year %}
-								{% unless forloop.first %}</ul>{% endunless %}
-								<h3 class="year-heading">{{ item_year }}</h3>
-								<ul class="post-list year-grouped">
-								{% assign current_year = item_year %}
-						{% endif %}
-						<li>
-							<span class="title-and-tags">
-								<a class="post-list" href="{{ item.external_url | default: item.link | default: item.url }}">{{ item.title }}</a> 
-							</span>
-						</li>
-						{% if forloop.last %}</ul>{% endif %}
-				{% endfor %}  
-
-				<ul>
-						{% for content in site.ai_generated %}
-								<li>
-										<a href="{{ content.url }}">{{ content.title }}</a> - {{ content.client }}
-								</li>
-						{% endfor %}
-				</ul>
-		</main>
-
-</div>
-
-
+    </ul>
+  {% endif %}
+</main>
