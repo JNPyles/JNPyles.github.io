@@ -6,12 +6,20 @@ title: Home
 {% assign current_year = "" %}
 {% assign sorted_tags = site.tags | sort %}
 
-<h2>Tags</h2>
-{% for tag in sorted_tags %}
-		<a href="/tags/#{{ tag[0] | slugify }}">
-			{{ tag[0] }} <small>({{ tag[1].size }})</small>
-		</a>{% unless forloop.last %} &middot; {% endunless %}
-{% endfor %}
+<h2>Connect</h2>
+		<ul>
+			<li><a href="https://github.com/JNPyles" target="_blank" aria-label="GitHub">Github</a></li>
+			<li><a href="https://huggingface.co/JNPyles" target="_blank" aria-label="Hugging Face">Huggingface</a></li>
+			<li><a href="https://www.linkedin.com/in/jonathonpyles/" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
+		</ul>
+<hr>
+
+	<h2>Tags</h2>
+	{% for tag in sorted_tags %}
+			<a href="/tags/#{{ tag[0] | slugify }}">
+				{{ tag[0] }} <small>({{ tag[1].size }})</small>
+			</a>{% unless forloop.last %} &middot; {% endunless %}
+	{% endfor %}
 
 <hr>
 
