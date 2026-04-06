@@ -3,45 +3,45 @@ layout: default
 title: Home
 ---
 
-{% assign current_year = "" %}
 {% assign sorted_tags = site.tags | sort %}
 
 <h2>Connect</h2>
-		<ul>
-			<li><a href="https://github.com/JNPyles" target="_blank" aria-label="GitHub">Github</a></li>
-			<li><a href="https://huggingface.co/JNPyles" target="_blank" aria-label="Hugging Face">Huggingface</a></li>
-			<li><a href="https://www.linkedin.com/in/jonathonpyles/" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
-		</ul>
-<hr>
-
-	<h2>Tags</h2>
-	{% for tag in sorted_tags %}
-			<a href="/tags/#{{ tag[0] | slugify }}">
-				{{ tag[0] }} <small>({{ tag[1].size }})</small>
-			</a>{% unless forloop.last %} &middot; {% endunless %}
-	{% endfor %}
+<ul>
+  <li><a href="https://github.com/JNPyles">GitHub</a></li>
+  <li><a href="https://huggingface.co/JNPyles">Hugging Face</a></li>
+  <li><a href="https://www.linkedin.com/in/jonathonpyles/">LinkedIn</a></li>
+</ul>
 
 <hr>
 
-<main>
-	   <h2>Posts</h2>
-				<ul>
-						{% for item in site.posts %}
-								<li>
-										<a href="{{ item.url }}">{{ item.title }}</a> — {{ item.date | date: "%B %d, %Y" }}
-								</li>
-						{% endfor %}
-				</ul>
+<h2>Tags</h2>
+<p>
+  {% for tag in sorted_tags %}
+    <a href="/tags/#{{ tag[0] | slugify }}">
+     {{ tag[0] }} <small>({{ tag[1].size }})</small>
+    </a>{% unless forloop.last %} &middot; {% endunless %}
+  {% endfor %}
+</p>
 
-  {% if site.ai_generated %}
-    <hr>
-    <h3>AI Generated Content</h3>
-    <ul>
-      {% for content in site.ai_generated %}
-        <li>
-          <a href="{{ content.url }}">{{ content.title }}</a> - {{ content.client }}
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-</main>
+<hr>
+
+<h2>Posts</h2>
+<ul>
+  {% for item in site.posts %}
+    <li>
+      <a href="{{ item.url }}">{{ item.title }}</a> — {{ item.date | date: "%B %d, %Y" }}
+    </li>
+  {% endfor %}
+</ul>
+
+{% if site.ai_generated %}
+  <hr>
+  <h2>AI Generated Content</h2>
+  <ul>
+    {% for content in site.ai_generated %}
+      <li>
+        <a href="{{ content.url }}">{{ content.title }}</a> — {{ content.client }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
