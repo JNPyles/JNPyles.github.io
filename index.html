@@ -33,15 +33,3 @@ title: Home
     </li>
   {% endfor %}
 </ul>
-
-{% if site.ai_generated %}
-  <hr>
-  <h2>AI Generated Content</h2>
-  <ul>
-    {% for content in site.ai_generated %}
-      <li>
-        <a href="{{ content.url }}">{{ content.title }}</a> — {{ content.client }}
-      </li>
-    {% endfor %}
-  </ul>
-{% endif %}
