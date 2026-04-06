@@ -44,3 +44,8 @@ nav a {
   text-decoration: none;
   color: var(--text);
 }
+
+header p {
+  color: var(--meta);
+  font-size: 0.9rem;
+}
