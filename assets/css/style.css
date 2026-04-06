@@ -1,51 +1,166 @@
-/* Pruned Base - Only the essentials */
+/* ==========================================================================
+   MASTER CSS - "NO-STYLE-PLEASE" AESTHETIC
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Variables (The Color Palette)
+   -------------------------------------------------------------------------- 
+   Change these core colors to alter the entire look of the site. 
+   By default, this is a high-contrast black and white theme. */
 :root {
-  --bg: #ffffff;
-  --text: #000000;
-  --link: #0000ee;
-  --meta: #555555;
+  --bg: #ffffff;             /* Main background color */
+  --text: #000000;           /* Main text color */
+  --link: #0000ee;           /* Classic, unvisited web link blue */
+  --meta: #555555;           /* Lighter grey for dates, tags, and borders */
 }
 
+/* Automatic Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121212;
-    --text: #e0e0e0;
-    --link: #5ea8ff;
+    --bg: #121212;           /* Deep grey/black for dark mode background */
+    --text: #e0e0e0;         /* Soft white for dark mode text */
+    --link: #5ea8ff;         /* Brighter blue to remain readable on dark */
+    --meta: #999999;         /* Medium grey for dark mode metadata */
   }
 }
 
+/* --------------------------------------------------------------------------
+   2. Base & Reset
+   -------------------------------------------------------------------------- 
+   Strips away opinionated browser defaults and sets the core foundation. */
+* {
+  /* Removes all CSS animations/transitions for an instant, raw feel */
+  transition: none !important;
+  border-radius: 0 !important; 
+}
+
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.5; /* Standard web readability */
+  /* Uses the operating system's native font for maximum performance */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.125rem;       /* Slightly larger than standard for readability */
+  line-height: 1.6;          /* Generous vertical spacing for text */
   color: var(--text);
   background-color: var(--bg);
-  max-width: 800px; /* Standard readable width */
-  margin: 2rem auto;
-  padding: 0 1rem;
+  
+  /* Layout constraint */
+  max-width: 800px;          /* Prevents text from spanning too wide on large screens */
+  margin: 2rem auto;         /* Centers the content and adds top/bottom breathing room */
+  padding: 0 1rem;           /* Prevents text from touching the edges on mobile */
 }
 
-/* Links should look like links */
+/* --------------------------------------------------------------------------
+   3. Typography & Links
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Link Styling */
 a {
   color: var(--link);
-  text-decoration: underline; 
+  text-decoration: underline; /* Permanent underline is standard for minimal sites */
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
-/* Remove all custom transitions and smoothing */
-* {
-  transition: none !important;
-  border-radius: 0 !important;
+a:hover {
+  text-decoration-thickness: 2px; /* Slightly thicker underline on hover for feedback */
 }
 
+/* Lists */
+ul, ol {
+  padding-left: 1.5rem; /* Ensures bullets/numbers don't get cut off */
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. Layout Components
+   -------------------------------------------------------------------------- */
+/* Main Navigation */
 nav {
   margin-bottom: 2rem;
 }
 
 nav a {
-  text-decoration: none;
+  text-decoration: none; /* Removes underline from the site title */
   color: var(--text);
+  font-size: 1.2rem;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Horizontal Rules (Dividers) */
+hr {
+  border: 0;
+  border-top: 1px solid var(--meta); /* Uses the meta color for a subtle line */
+  margin: 2rem 0;
+  opacity: 0.5; /* Makes the line a bit softer */
+}
+
+/* --------------------------------------------------------------------------
+   5. Post & Page Specific Styling
+   -------------------------------------------------------------------------- */
+/* Post Header Metadata (Dates, Tags, Links) */
 header p {
   color: var(--meta);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  margin-top: -0.5rem; /* Pulls the metadata slightly closer to the H1 */
+}
+
+/* Anchor links inside the metadata (Tags, External links) */
+header p a {
+  color: var(--meta);
+}
+
+header p a:hover {
+  color: var(--link); /* Highlights blue only when hovered */
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--meta);
+  color: var(--meta);
+  font-style: italic;
+  background-color: transparent; 
+}
+
+/* --------------------------------------------------------------------------
+   6. Custom Pages
+   -------------------------------------------------------------------------- */
+/* 404 Error Page Styling */
+.error-page {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.error-page h1 {
+  font-size: 5rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.error-page p {
+  font-size: 1.2rem;
+  color: var(--meta);
+  margin-top: 1rem;
 }

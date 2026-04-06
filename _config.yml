@@ -17,19 +17,8 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# This tells Jekyll how to handle your site
-theme: minima
-
 permalink: /:title/
 highlighter: rouge
-
-minima:
-  skin: dark  # or "dark", "solarized", "solarized-dark"
-
-collections:
-  ai_generated:
-    output: true
-    permalink: /ai_generated/:path/
 
 defaults:
   - scope:
