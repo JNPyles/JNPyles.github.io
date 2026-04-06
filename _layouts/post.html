@@ -12,28 +12,6 @@ layout: default
         {% endfor %}
       {% endif %}
     </p>
-
-    {% if page.colab_url or page.github_url or page.linkedin_url or page.huggingface_url or page.dropbox_url %}
-    <p>
-        {% assign links_exist = false %}
-        {% if page.colab_url %}
-            <a href="{{ page.colab_url }}">Colab ↗</a>
-            {% assign links_exist = true %}
-        {% endif %}
-        
-        {% if page.github_url %}
-            {% if links_exist %} &middot; {% endif %}<a href="{{ page.github_url }}">GitHub ↗</a>
-            {% assign links_exist = true %}
-        {% endif %}
-
-        {% if page.huggingface_url %}
-            {% if links_exist %} &middot; {% endif %}<a href="{{ page.huggingface_url }}">Hugging Face ↗</a>
-            {% assign links_exist = true %}
-        {% endif %}
-        
-        {% comment %} ... repeat for LinkedIn/Dropbox ... {% endcomment %}
-    </p>
-    {% endif %}
 </header>
 
 <hr>
