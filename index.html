@@ -12,7 +12,7 @@ title: Home
     <nav class="tag-list">
       {% for tag in sorted_tags %}
         <a href="/tags/#{{ tag[0] | slugify }}" class="tag-link">
-          {{ tag[0] }} <small>({{ tag[1].size }})</small>
+          #{{ tag[0] }} <small>({{ tag[1].size }})</small>
         </a>
       {% endfor %}
     </nav>
