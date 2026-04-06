@@ -7,12 +7,12 @@ layout: default
     <p>
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
       {% if page.tags.size > 0 %}
-        — 
+        | 
         {% for tag in page.tags %}
           <a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %} {% endunless %}
         {% endfor %}
       {% endif %}
-        — 
+        | 
 {% if page.colab_url or page.github_url or page.linkedin_url or page.huggingface_url or page.dropbox_url %}
     {% assign links = "" | split: "," %}
     {% if page.colab_url %}
