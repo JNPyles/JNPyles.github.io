@@ -8,7 +8,7 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
       {% if page.tags.size > 0 %}
         | {% for tag in page.tags %}
-          <a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %} {% endunless %}
+          <a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %} &middot; {% endunless %}
         {% endfor %}
       {% endif %}
     </p>
