@@ -24,25 +24,25 @@ layout: default
     
     {% if page.github_url %}
         {% if links.size > 0 %} &middot; {% endif %}
-        <a href="{{ page.github_url }}">GitHub ↗</a>
+        <a href="{{ page.github_url }}">View on GitHub ↗</a>
         {% assign links = "yes" | split: "," %}
     {% endif %}
     
     {% if page.linkedin_url %}
         {% if links.size > 0 %} &middot; {% endif %}
-        <a href="{{ page.linkedin_url }}">LinkedIn ↗</a>
+        <a href="{{ page.linkedin_url }}">View on LinkedIn ↗</a>
         {% assign links = "yes" | split: "," %}
     {% endif %}
     
     {% if page.huggingface_url %}
         {% if links.size > 0 %} &middot; {% endif %}
-        <a href="{{ page.huggingface_url }}">Hugging Face ↗</a>
+        <a href="{{ page.huggingface_url }}">View on Hugging Face ↗</a>
         {% assign links = "yes" | split: "," %}
     {% endif %}
     
     {% if page.dropbox_url %}
         {% if links.size > 0 %} &middot; {% endif %}
-        <a href="{{ page.dropbox_url }}">Dropbox ↗</a>
+        <a href="{{ page.dropbox_url }}">View on Dropbox ↗</a>
         {% assign links = "yes" | split: "," %}
     {% endif %}
 </p>
