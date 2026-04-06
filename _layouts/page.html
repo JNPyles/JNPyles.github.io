@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<header>
+  <h1>{{ page.title }}</h1>
+  
+  {% if page.colab_url or page.github_url or page.linkedin_url or page.huggingface_url or page.dropbox_url %}
+  <p>
+    {% if page.colab_url %}<a href="{{ page.colab_url }}">Run in Colab</a>{% endif %}
+    {% if page.github_url %}&middot; <a href="{{ page.github_url }}">GitHub</a>{% endif %}
+    {% if page.linkedin_url %}&middot; <a href="{{ page.linkedin_url }}">LinkedIn</a>{% endif %}
+    {% if page.huggingface_url %}&middot; <a href="{{ page.huggingface_url }}">Hugging Face</a>{% endif %}
+    {% if page.dropbox_url %}&middot; <a href="{{ page.dropbox_url }}">Dropbox</a>{% endif %}
+  </p>
+  {% endif %}
+</header>
+
+<hr>
+
+<article>
+  {{ content }}
+</article>

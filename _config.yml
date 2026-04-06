@@ -37,8 +37,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: ""
-      type: "ai_generated"
-    values:
-      layout: "ai-post"
