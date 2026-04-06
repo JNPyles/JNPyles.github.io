@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% seo %}
     <link rel="stylesheet" href="/assets/css/style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    
     <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
 </head>
 <body>
-    <nav class="site-nav">
-        <div class="nav-links">
-            <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}"><b>{{ site.title }}</b></a>
-         </div>
+    <nav>
+        <a href="/"><b>{{ site.title }}</b></a>
     </nav>
+    
     <hr>
+
     <main>
         {{ content }}
     </main>

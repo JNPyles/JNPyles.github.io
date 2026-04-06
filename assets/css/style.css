@@ -35,3 +35,12 @@ a {
   transition: none !important;
   border-radius: 0 !important;
 }
+
+nav {
+  margin-bottom: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+}
