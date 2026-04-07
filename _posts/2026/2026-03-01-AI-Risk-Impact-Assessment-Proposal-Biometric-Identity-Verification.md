@@ -1,5 +1,5 @@
 ---
-title: "AI Risk Impact Assessement Proposal: Biometric Identity Verification"
+title: "AI Risk Impact Assessment Proposal: Biometric Identity Verification"
 date: 2026-03-01
 tags: [AI Governance, Academic Papers]
 ---
