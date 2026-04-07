@@ -4,7 +4,7 @@ title: "Exploring iOS App Development"
 date: 2012-02-23
 tags: [Projects, Technology]
 description: "In 2012, I considered becoming an iOS app developer. At that time, iOS apps were written in Objective C. I had no prior programming education or experience."
-image: assets/images/2012/2012-02-23-ios-app-development/exploring-ios-app-development.jpg
+og_image: assets/images/2012/2012-02-23-ios-app-development/exploring-ios-app-development.jpg
 ---
 In 2012, I considered becoming an iOS app developer. At that time, iOS apps were written in Objective C. I had no prior programming education or experience, so I bought two books to teach myself: *Programming in Objective-C (Developer's Library) 4th Edition* by Stephen G. Kochan and *Objective-C Programming: The Big Nerd Ranch Guide 1st Edition* by Aaron Hillegass. Using these resources, along with some YouTube videos, I developed and published two apps on the Apple App Store. While I enjoyed making these apps, I also realized that pursuing app development as a career path was full of uncertainty and risk. Later that year, I got hired as a compliance analyst at a mortgage lender, launching my career in a new direction. Although I did not continue developing apps, I have continued to dabble in programming as a hobby, and this experience has helped me in my recent transition from mortgage to AI compliance. 
 
