@@ -3,7 +3,9 @@ github_username: JNPyles
 
 title: Jonathon Pyles
 description: AI Development & Governance | CRCM | CERP
-url: "https://jnpyles.com" 
+url: "https://jnpyles.com"
+baseurl: ""
+
 author:
   name: Jonathon Pyles
 
