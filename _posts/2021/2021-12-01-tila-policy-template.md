@@ -1,7 +1,10 @@
 ---
-title: "Mortgage Compliance Policy Template: Truth in Lenidng Act (TILA) & Regulation Z"
+layout: post
+title: "Mortgage Compliance Policy: Truth in Lenidng Act (TILA)"
 date: 2021-12-01
 tags: [Banking Compliance]
+description: "This is a TILA policy template I developed while working as a compliance manager for a mortgage lender."
+og_image: assets/images/2021/tila-policy-template/mortgage-compliance-policy-truth-in-lenidng-act.jpg
 ---
 
 # COMPLIANCE POLICY MANUAL
