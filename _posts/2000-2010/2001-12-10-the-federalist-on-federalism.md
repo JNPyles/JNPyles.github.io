@@ -4,7 +4,7 @@ title: "The Federalist Papers on Defining and Preserving the Balance of Power Be
 date: 2003-12-10
 tags: [Academic Papers]
 description: "This is a paper I wrote in 2001 for a course on The Federalist as part of my master's program in political science at Claremont Graduate University."
-og_image: /assets/images/2001/the-federalist-on-federalism/the-federalist-on-federalism.jpg
+og_image: /assets/images/2000-2010/the-federalist-on-federalism/the-federalist-on-federalism.jpg
 ---
 *This is a paper I wrote in 2001 for a course on The Federalist as part of my master's program in political science at Claremont Graduate University. [Click here to view the submitted paper with the professor's comments.↗](https://www.dropbox.com/scl/fi/6pco72spmx7byl5t3dyk1/Claremont-Paper-Federalism-in-the-Federalist.pdf?rlkey=dbe3j7y9joub7wgtgxgsjvw3z&st=anayzkjo&dl=0){:target="_blank"}*
 
