@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "The Federalist Papers on Defining and Preserving the Balance of Power Between the State and National Governments"
-date: 2001-12-10
+date: 2003-12-10
 tags: [Academic Papers]
-description: "In this graduate paper, I analyze federalism as understood by the authors of The Federalist Papers."
+description: "This is a paper I wrote in 2001 for a course on The Federalist by Charles Kessler as part of my master's program in political science at Claremont Graduate University."
 og_image: /assets/images/2001/the-federalist-on-federalism/the-federalist-on-federalism.jpg
 ---
-*This is a paper I wrote in 2001 for a course on *The Federalist* by Charles Kessler as part of my master's program in political science at Claremont Graduate University. [Click here to view the submitted paper with Dr. Kessler's comments.↗](https://www.dropbox.com/scl/fi/6pco72spmx7byl5t3dyk1/Claremont-Paper-Federalism-in-the-Federalist.pdf?rlkey=dbe3j7y9joub7wgtgxgsjvw3z&st=anayzkjo&dl=0){:target="_blank"}*
+*This is a paper I wrote in 2001 for a course on *The Federalist* as part of my master's program in political science at Claremont Graduate University. [Click here to view the submitted paper with the professor's comments.↗](https://www.dropbox.com/scl/fi/6pco72spmx7byl5t3dyk1/Claremont-Paper-Federalism-in-the-Federalist.pdf?rlkey=dbe3j7y9joub7wgtgxgsjvw3z&st=anayzkjo&dl=0){:target="_blank"}*
 
 ---
 [cite_start]In Federalist No. 37, Publius reflects upon the difficulty the drafters of the Constitution must have experienced in delineating the balance of power between the national and state governments: [cite: 2]
