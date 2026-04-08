@@ -2,7 +2,7 @@
 title: "Data Visualization with Python"
 date: 2024-02-18
 tags: [Data Science, Projects]
-image: /assets/images/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
+image: /assets/images/2021-2025/2024-02-18-Python-Data-Visualization/data-visualization-with-python.jpg
 ---
 ## Project Overview
 My goal for this project was to get hands-on practice visualizing data using Python.  
@@ -31,7 +31,7 @@ The head() function shows the first five rows by default.
 df.head()
 >>>
 ```
-![Automobile table head]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/automobile-table-head.webp)
+![Automobile table head]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/automobile-table-head.webp)
 
 The shape function tells me that the data consists of 201 rows and 26 columns. 
 ```
@@ -77,7 +77,7 @@ dtypes: float64(7), int64(9), object(10)
 memory usage: 41.0+ KB
 ```
 The describe() function provides statistical information for each colum (e.g. mean, standard deviation, quartiles, etc.)
-![Automobile Data Description]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/automobile-data-description.webp)
+![Automobile Data Description]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/automobile-data-description.webp)
 
 ## Visualizing the Data 
 
@@ -90,7 +90,7 @@ The histplot() function produces a histogram. I used the 'price' column for the 
 ```
 sns.histplot(data=df, x='price')
 ```
-![Price Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram.webp)
+![Price Histogram]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/price-histogram.webp)
 
 I improved the appearance of the graph by including additional parameters (e.g. title, x and y axis labels, and custom coloring).
 
@@ -102,13 +102,13 @@ plt.xlabel('Price of Cars')
 plt.ylabel('Frequency')
 sns.histplot(data=df, x='price', color='orange')
 ```
-![Price Histogram Improved]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram-improved.webp)
+![Price Histogram Improved]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/price-histogram-improved.webp)
 
 I further enhanced the graph with information on body style. 
 ```
 sns.histplot(data=df, x='price', kde=True, hue='body_style')
 ```
-![Price Histogram Improved with Body Styles]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram-improved-body-type.webp)
+![Price Histogram Improved with Body Styles]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/price-histogram-improved-body-type.webp)
 
 I used the FacetGrid() function to create price histograms for each body style. 
 
@@ -116,7 +116,7 @@ I used the FacetGrid() function to create price histograms for each body style.
 g = sns.FacetGrid(df, col="body_style")
 g.map(sns.histplot, "price")
 ```
-![Price Histogram Facet Grid]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/price-histogram-facetgrid-body-style.webp)
+![Price Histogram Facet Grid]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/price-histogram-facetgrid-body-style.webp)
 
 ### Box Plot
 
@@ -124,7 +124,7 @@ I used the boxplot() function to create a box plot for each body style.
 ```
 sns.boxplot(data=df, x='body_style', y='price')
 ```
-![Boxplot Body Styles]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/boxplot-body-styles.webp)
+![Boxplot Body Styles]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/boxplot-body-styles.webp)
 
 ### Count Plot
 
@@ -133,7 +133,7 @@ Next, I wanted to see the distribution of car makes. I used the `countplot()` fu
 ```python
 sns.countplot(data=df, x='make')
 ```
-![Countplot Car Makes]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/countplot-car-makes.webp)
+![Countplot Car Makes]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/countplot-car-makes.webp)
 
 Since the x-axis labels (the car makes) were overlapping and difficult to read, I adjusted the figure size and rotated the labels 90 degrees.
 
@@ -142,7 +142,7 @@ plt.figure(figsize=(20,7))
 sns.countplot(data=df, x='make', hue='make')
 plt.xticks(rotation=90);
 ```
-![Countplot Car Makes Improved]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/countplot-car-makes-improved.webp)
+![Countplot Car Makes Improved]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/countplot-car-makes-improved.webp)
 
 ### Line Plot
 
@@ -152,7 +152,7 @@ To practice creating line plots, I briefly switched to some of Seaborn's built-i
 flights = sns.load_dataset("flights")
 sns.lineplot(data = flights, x = 'month', y = 'passengers', ci=False, hue='year');
 ```
-![Flights Lineplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/flights-lineplot.webp)
+![Flights Lineplot]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/flights-lineplot.webp)
 
 Then, I loaded the "fmri" dataset. I used the `style` and `marker` parameters to further distinguish the lines representing different brain regions.
 
@@ -160,7 +160,7 @@ Then, I loaded the "fmri" dataset. I used the `style` and `marker` parameters to
 frmi = sns.load_dataset("fmri")
 sns.lineplot(data = frmi, x="timepoint", y="signal", hue="region", style="region", ci=False, marker=True)
 ```
-![FMRI Lineplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/fmri-lineplot.webp)
+![FMRI Lineplot]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/fmri-lineplot.webp)
 
 ## Exploring a New Dataset: Student Placement
 
@@ -177,27 +177,27 @@ I started by getting a feel for the new data using the `head()` and `describe()`
 placement.head()
 >>>
 ```
-![Placement Table Head]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/placement-table-head.webp)
+![Placement Table Head]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/placement-table-head.webp)
 
 
 ```python
 placement.describe()
 >>>
 ```
-![Placement Data Description]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/placement-data-description.webp)
+![Placement Data Description]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/placement-data-description.webp)
 
 I also created a quick count plot to see the ratio of students who were successfully placed versus those who were not, and used `value_counts()` to see the exact numbers.
 
 ```python
 sns.countplot(data=placement, x = 'status',)
 ```
-![Placement Status Countplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/placement-status-countplot.webp)
+![Placement Status Countplot]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/placement-status-countplot.webp)
 
 ```python
 placement['status'].value_counts()
 >>>
 ```
-![Placement Status Value Counts]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/placement-status-value-counts.webp)
+![Placement Status Value Counts]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/placement-status-value-counts.webp)
 
 ## Advanced Visualizations
 
@@ -210,14 +210,14 @@ I used a histogram to map secondary education percentages (`ssc_p`) against high
 ```python
 sns.histplot(data=placement, x='ssc_p', y='hsc_p', hue='status', kde=True)
 ```
-![Academic Percentages Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/academic-percentages-histogram.webp)
+![Academic Percentages Histogram]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/academic-percentages-histogram.webp)
 
 I also used a line plot to look at this same relationship from a different visual perspective. 
 
 ```python
 sns.lineplot(data=placement, x='hsc_p',y='ssc_p', hue='status')
 ```
-![Academic Percentages Lineplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/academic-percentages-lineplot.webp)
+![Academic Percentages Lineplot]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/academic-percentages-lineplot.webp)
 
 ### Heatmaps and Correlation
 
@@ -226,14 +226,14 @@ I wanted to explore the direct correlation between secondary and higher secondar
 ```python
 sns.heatmap(data=placement[['ssc_p','hsc_p']].corr(), annot=True);
 ```
-![Simple Correlation Heatmap]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/simple-correlation-heatmap.webp)
+![Simple Correlation Heatmap]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/simple-correlation-heatmap.webp)
 
 Later, I generated a heatmap for the entire dataset's correlation matrix. I applied a custom color map (`cmap='YlGnBu'`) to make the stronger correlations visually pop.
 
 ```python
 sns.heatmap(placement.corr(), annot = True, cmap='YlGnBu')
 ```
-![Full Correlation Heatmap]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/full-correlation-heatmap.webp)
+![Full Correlation Heatmap]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/full-correlation-heatmap.webp)
 
 ### Subject Streams and Degrees
 
@@ -242,21 +242,21 @@ I looked at the distribution of higher secondary subject streams (`hsc_s`) using
 ```python
 sns.countplot(x='hsc_s', data=placement, hue='hsc_s')
 ```
-![Subject Stream Countplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/subject-stream-countplot.webp)
+![Subject Stream Countplot]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/subject-stream-countplot.webp)
 
 Then, I used a box plot to see how degree percentages (`degree_p`) varied across those different subject streams.
 
 ```python
 sns.boxplot(data=placement, y='hsc_s', x='degree_p', hue='hsc_s' )
 ```
-![Degree Percentage by Stream Boxplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/degree-percentage-stream-boxplot.webp)
+![Degree Percentage by Stream Boxplot]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/degree-percentage-stream-boxplot.webp)
 
 To see how degree percentages directly affected placement status, I used a histogram with a kernel density estimate (`kde=True`).
 
 ```python
 sns.histplot(data=placement, x='degree_p', hue='status', kde=True)
 ```
-![Degree Percentage Status Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/degree-percentage-status-histogram.webp)
+![Degree Percentage Status Histogram]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/degree-percentage-status-histogram.webp)
 
 ### Joint Plots and Hexbins
 
@@ -265,7 +265,7 @@ To see the relationship between employability test percentages (`etest_p`) and s
 ```python
 sns.jointplot(data=placement, x='etest_p', y='ssc_p', kind='hex')
 ```
-![Employability vs Secondary Hexbin]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/employability-secondary-hexbin.webp)
+![Employability vs Secondary Hexbin]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/employability-secondary-hexbin.webp)
 
 I also viewed the employability test distribution on its own, noting the maximum score in the dataset.
 
@@ -274,7 +274,7 @@ sns.histplot(data=placement, x='etest_p', kde=True)
 placement['etest_p'].max()
 >>> 98.0
 ```
-![Employability Histogram]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/employability-histogram.webp)
+![Employability Histogram]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/employability-histogram.webp)
 
 ### Linear Regression Plots
 
@@ -283,11 +283,11 @@ Finally, I used `lmplot()` to create a scatter plot with a linear regression lin
 ```python
 sns.lmplot(x='ssc_p', y='hsc_p', hue='status', data= placement)
 ```
-![Linear Regression Placement]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/linear-regression-placement.webp)
+![Linear Regression Placement]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/linear-regression-placement.webp)
 
 As a final check, I created a box plot to isolate secondary percentages and see their spread against the final placement status.
 
 ```python
 sns.boxplot(x='ssc_p', y='status', data=placement)
 ```
-![Secondary Percentage Status Boxplot]({{ site.baseurl }}/assets/images/2024-02-18-Python-Data-Visualization/secondary-percentage-status-boxplot.webp)
+![Secondary Percentage Status Boxplot]({{ site.baseurl }}/assets/images/2021-2025/2024-02-18-Python-Data-Visualization/secondary-percentage-status-boxplot.webp)
