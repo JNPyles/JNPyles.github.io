@@ -7,6 +7,7 @@ description: "In this project, I practice exploring data visualization with Pyth
 og_image: /assets/images/2021-2025/python-data-visualization/data-visualization-with-python.jpg
 ---
 *Note: This is a project I completed for U.T. Austin's [Post Graduate Program in AI & Machine Learning: Business Applications](https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
+
 ---
 
 ## Project Overview
