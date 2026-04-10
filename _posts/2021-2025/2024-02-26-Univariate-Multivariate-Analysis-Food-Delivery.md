@@ -3,10 +3,11 @@ layout: post
 title: "Univariate and Multivariate Analysis of Food Delivery Service"
 date: 2024-02-26
 tags: [Data Science, Projects]
-description: This is a project practicing univariate and multivarate data analysis that I completed for U.T. Austin's Post Graduate Program in AI & Machine Learning Business Applications. 
+description: "This is a project practicing univariate and multivarate data analysis that I completed for U.T. Austin's Post Graduate Program in AI & Machine Learning Business Applications."
 og_image: assets/images/2021-2025/univariate-multivariate-analysis/univariate-multivariate-analysis-food-delivery-service.jpg
 ---
-**Note: This is a project I completed for U.T. Austin's [Post Graduate Program in AI & Machine Learning: Business Applications](https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course). The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.**
+*Note: This is a project I completed for U.T. Austin's [Post Graduate Program in AI & Machine Learning: Business Applications](https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course). The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
+---
 
 ## Executive Summary
 

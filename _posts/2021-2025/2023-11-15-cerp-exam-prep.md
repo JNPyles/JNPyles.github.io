@@ -6,7 +6,6 @@ tags: [Certifications]
 description: "This is a summary of my preparation for the CERP exam with links to resources I used and created."
 og_image: assets/images/2021-2025/cerp-exam-prep/cerp-exam-prep.jpg
 ---
-
 In October 2023, I successfully completed the CERP examination. Below is a summary of my preparation efforts with links to resources I used and created. Hopefully, this information will be helpful to anyone currently planning to take the exam. 
 
 ## ABA's CERP Exam Online Prep Course

@@ -4,9 +4,10 @@ title: "Data Visualization with Python"
 date: 2024-02-18
 tags: [Data Science, Projects]
 description: "In this project, I practice exploring data visualization with Python."
-image: /assets/images/2021-2025/python-data-visualization/data-visualization-with-python.jpg
+og_image: /assets/images/2021-2025/python-data-visualization/data-visualization-with-python.jpg
 ---
 *Note: This is a project I completed for U.T. Austin's [Post Graduate Program in AI & Machine Learning: Business Applications](https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
+---
 
 ## Project Overview
 My goal for this project was to get hands-on practice visualizing data using Python.  

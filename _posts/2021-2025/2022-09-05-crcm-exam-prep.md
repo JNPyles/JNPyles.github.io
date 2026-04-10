@@ -6,7 +6,6 @@ tags: [Certifications]
 description: "This is a summary of my preparation for the CRCM exam with links to resources I used and created."
 og_image: assets/images/2021-2025/crcm-exam-prep/crcm-exam-prep.jpg
 ---
-
 In August 2022, I successfully completed the CRCM examination. Below is a summary of my preparation efforts with links to resources I used and created. Hopefully, this information will be helpful to anyone currently planning to take the exam. 
 
 ## ABA's CRCM Exam Online Prep Course

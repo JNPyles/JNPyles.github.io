@@ -1,9 +1,13 @@
 ---
+layout: post
 title: "Machine Learning to Identify Bank Customers Interested in a Personal Loan"
 date: 2024-04-13
 tags: [Data Science, Projects]
+description: "This is a machine learning project I completed for U.T. Austin's Post Graduate Program in AI & Machine Learning."
+og_image: assets/images/2021-2025/machine-learning-targeted-marketing/machine-learning-to-identify-bank-customers-interested-in-a- personal-loan.jpg
 ---
 *Note: This is a project I completed for U.T. Austin's [Post Graduate Program in AI & Machine Learning: Business Applications](https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course){:target="_blank"}. The data and business scenarios are part of a simulated case study and do not represent the actual operations of any real-world entity.*
+---
 
 ## Executive Summary
 
