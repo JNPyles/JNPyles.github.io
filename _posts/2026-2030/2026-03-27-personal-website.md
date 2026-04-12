@@ -1,9 +1,10 @@
 ---
-title: "Personal Website [In Progress]"
+title: "Personal Website"
 date: 2026-03-27
 tags: [Projects, Technology]
 github_url: "https://github.com/JNPyles/JNPyles.github.io"
 ---
+*This project is in progress.*
 
 ## Overview
 The primary purpose of **jnpyles.com** is to serve as a centralized, permanent home for my technical projects and professional insights.
