@@ -30,5 +30,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-
-show_drafts: true
