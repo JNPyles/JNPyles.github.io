@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Using Python to Explore CFPB Complaint Data"
 date: 2024-08-07
 tags: [Projects, Data Science]
