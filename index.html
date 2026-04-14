@@ -7,9 +7,9 @@ title: Home
 
 <p>
 		<strong>Connect: </strong>
-		<a href="https://www.linkedin.com/in/jonathonpyles/">LinkedIn</a>&bull  
-		<a href="https://github.com/JNPyles">Github</a>&bull  
-		<a href="https://huggingface.co/JNPyles">Hugging Face</a>&bull
+		<a href="https://www.linkedin.com/in/jonathonpyles/">LinkedIn</a>•  
+		<a href="https://github.com/JNPyles">Github</a>•  
+		<a href="https://huggingface.co/JNPyles">Hugging Face</a>•
     <a href="https://apadaegg.itch.io/">Itch.io</a>
 </p>
 <p>
@@ -19,7 +19,7 @@ title: Home
 <p>
   <strong>Tags: </strong>
 		{% for tag in sorted_tags %}
-    &bull <a href="/tags/#{{ tag[0] | slugify }}">
+    • <a href="/tags/#{{ tag[0] | slugify }}">
      {{ tag[0] }} <small>({{ tag[1].size }})</small>
     </a>{% unless forloop.last %}  {% endunless %}
   {% endfor %}
